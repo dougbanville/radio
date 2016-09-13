@@ -1,0 +1,69 @@
+/*
+===============================================================================
+  modeuls - module 1 example
+===============================================================================
+*/
+
+.find-prog-nav--sub-expand {
+	background: url('../images/triangle_down.png') no-repeat;
+	background-position: 100%;
+}
+
+
+.m25-standard-page-side-nav {
+	/*.rte-header nav {
+		margin: auto;
+		max-width: 1440px;
+		overflow: auto;
+		position: relative;
+		min-height: 50px;
+	}*/
+	
+	.rte-header nav .nav-level-two {
+		height: 100%;
+	}
+	
+	.rte-header nav .nav-level-two li {
+		width: 100%;
+	}
+	
+	.rte-header nav .nav-level-two li a {
+		color: $text-white;
+		border-bottom: 1px solid $fill-white;
+		padding: 10px;
+	}
+	
+	.rte-header nav .nav-level-two li a:hover {
+		padding: 10px;
+		background-color: #3C7C9C;
+	}
+
+	.nuacht-banner {
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
+@media only screen and (min-width:$tablet-breakpoint) {/* tablet */
+
+
+}
+
+
+@media only screen and (min-width:$desktop-breakpoint) {/* desktop */
+
+	.m25-standard-page-side-nav {
+		/*.rte-header, .rte-header nav {
+			min-height: 0 !important;
+		}*/
+		
+		.rte-header nav .nav-level-one, .rte-header nav .nav-level-two {
+			height: auto;
+		}
+		
+		.rte-header nav .nav-level-two li {
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,83 @@
+/*
+===============================================================================
+module 7 three column block
+===============================================================================
+*/
+
+	
+	.recommended-play-icon {
+		width: 25px;
+		height: 25px;
+		background-color: $fill-brown;
+		background-size: 35%;
+		-webkit-background-size: 35%; 
+		-moz-background-size: 35%;
+		-o-background-size: 35%;
+		display: block;
+		background-repeat: no-repeat;
+		background-position: center;
+		border-radius: 50%;
+		position: relative;
+		right: 10px;
+	}
+	
+	.recommended-pause-icon {
+		width: 25px;
+		height: 25px;
+		background-color: $fill-brown;
+		background-size: 35%;
+		-webkit-background-size: 35%; 
+		-moz-background-size: 35%;
+		-o-background-size: 35%;
+		display: block;
+		background-repeat: no-repeat;
+		background-position: center;
+		border-radius: 50%;
+		position: relative;
+		right: 10px;
+	}
+	
+	// rnag toggle twitter and fb
+	
+	.info-tab-content-rnag{
+		display: none;
+	}
+
+	.info-tab-content-rnag.current{
+		display: inherit;
+	}
+		
+	.tab-toggle-rnag {
+		margin-top: 4px;
+	}
+
+	.tab-toggle-rnag.active-tab-rnag {
+		margin-top: 0;
+		padding-bottom: 12px !important;
+	}
+	
+
+@media only screen and (min-width:$tablet-breakpoint) {/* tablet */
+
+		
+	.fixed-height-wrapper::-webkit-scrollbar {
+		width: 12px;
+	}
+	 
+	.fixed-height-wrapper::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 3px rgba(15,15,15,0.3); 
+		background: rgba(123,106,93,0.3);
+	}
+	 
+	.fixed-height-wrapper::-webkit-scrollbar-thumb {
+		-webkit-box-shadow: inset 0 0 3px rgba(15,15,15,0.5); 
+		background: #7b6a5d;
+	}
+	
+}
+
+
+@media only screen and (min-width:$desktop-breakpoint) {/* desktop */
+
+	
+}

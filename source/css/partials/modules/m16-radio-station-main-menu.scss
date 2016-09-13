@@ -1,0 +1,142 @@
+/*
+===============================================================================
+  modeuls - module 1 example
+===============================================================================
+*/
+
+
+.m16-radio-station-main-menu {
+
+		.rte-header {
+			min-height: 0;
+		}
+		
+		.rte-header nav {
+			top: 0;
+			min-height:	0;
+		}
+
+	  .rte-header nav .nav-level-one li .more-selected:hover, .rte-header nav .nav-level-one li .more-selected:active {
+		background-color: #3C7C9C;
+	  }
+	  
+	  .rte-header nav .nav-level-one li a, .rte-header nav .nav-level-two li a {
+		border-bottom: 1px solid $fill-white;
+	}
+	  
+	  .rte-header nav .nav-level-two li .nav-level-three li a, .find-show-nav--sub-expand, .find-show-nav--sub-expand:hover  {
+		color: $text-white !important;
+		padding: 1rem !important;
+		height: auto !important;
+		line-height: 16px !important;
+	  }
+	  .find-show-nav--sub-expand{
+	  		font-weight:700;
+			text-shadow: 1px 1px #000000; /* header titles*/
+	  }
+	  .find-show-nav--sub-expand:hover {
+		cursor: default !important;
+	  }
+	  
+	  .rte-header nav .nav-level-two li .nav-level-three li a:hover {
+		background-color: #3C7C9C !important;
+	  }
+	  
+	  .rte-header nav .nav-level-one {
+	   padding: 0;
+	   /*margin: 34px 0 0 0;*/
+	   margin-top: 0;
+	   height: auto;
+	   overflow: hidden;
+	   /*display: none;*/
+	  }
+	  
+	  .rte-header nav .nav-level-three {
+			margin: 0;
+			padding: 0;
+	  }
+	  
+	  .js-show-hide {
+			display: none;
+		}
+	  
+  }
+  
+
+@media only screen and (min-width:$tablet-breakpoint) {/* tablet */
+
+	.m16-radio-station-main-menu {
+	
+		.rte-header {
+			min-height: 50px;
+		}
+		
+		.rte-header nav {
+			top: inherit;
+			min-height:	50px;
+		}
+	
+		 .rte-header nav .nav-level-one {
+		   display: block;
+		   margin: 0;
+		   height: 51px;
+		  }
+		  
+		  .rte-header nav .nav-level-one li {
+			border-right: 1px solid $fill-white;
+		}
+		
+		.rte-header nav .nav-level-one li a {
+			border-bottom: none;
+		}
+		
+		.rte-header nav .nav-level-two li {
+			border-right: none;
+			border-bottom: none;
+		}
+		
+		.rte-header nav .nav-level-two li a {
+			border-bottom: none;
+		}
+		  
+		  .rte-header nav .nav-level-two {
+			position: absolute;
+			top: 52px;
+			z-index: 1;
+		  }
+		  
+		.rte-header nav .nav-level-two li {
+			width: 16.666666%;
+		}
+			
+		.rte-header nav .nav-level-two li:nth-child(3n+1) {
+			clear: none;
+		}
+		
+		.find-show-nav .find-show-nav--sub {
+			height: auto;
+			/*position: absolute;
+			top: 50px;
+			z-index: 1;*/
+		}
+		
+		.rte-header nav .nav-level-one li .more-menu-trigger, .rte-header nav .nav-level-two li .more-menu-trigger, .rte-header nav .nav-level-one li .more-menu-trigger, .rte-header nav .nav-level-two li .find-show-nav--sub-expand {
+		  background: none; 
+		 }
+		 
+		.rte-header nav .nav-level-one li .more-selected, .rte-header nav .nav-level-two li .more-selected {
+		  background: none;
+		  }
+		  
+		.rte-header nav .nav-level-two li .nav-level-three li a:hover {
+			background: #695A4F;
+		}
+	}
+
+}
+
+
+@media only screen and (min-width:$desktop-breakpoint) {/* desktop */
+
+	
+}

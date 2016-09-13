@@ -1,0 +1,31 @@
+#datepicker {
+  .ui-datepicker-header {
+
+    .ui-datepicker-prev {
+      float: left;
+    }
+
+    .ui-datepicker-next {
+      float: right;
+    }
+
+    .ui-datepicker-title {
+      text-align: center;
+      padding: 10px;
+    }
+  }
+
+  .ui-datepicker-calendar {
+    td, th {
+      text-align: center;
+      padding: inherit;
+    }
+
+    td {
+      .ui-state-default {
+        display: block;
+        padding: 10px;
+      }
+    }
+  }
+}

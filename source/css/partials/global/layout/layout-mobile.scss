@@ -1,0 +1,30 @@
+/*
+===============================================================================
+global layout mobile only
+===============================================================================
+*/
+
+/*-- margin --*/
+
+.mb0--mob { margin-bottom: 0 !important; }
+
+.mb1--mob { margin-bottom:$space-1 !important; }
+
+.mb2--mob { margin-bottom:$space-2 !important; }
+
+@media only screen and (min-width:$tablet-breakpoint) {/* tablet */
+
+	
+
+}
+
+
+@media only screen and (min-width:$desktop-breakpoint) {/* desktop */
+
+	.mb0--mob { margin-bottom: 0 !important; }
+
+	.mb1--mob { margin-bottom: 0 !important; }
+
+	.mb2--mob { margin-bottom: 0 !important; }
+	
+}

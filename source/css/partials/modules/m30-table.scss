@@ -1,0 +1,29 @@
+/*
+===============================================================================
+  module 30 table
+===============================================================================
+*/
+
+.m30-table table {
+	background-color: $fill-white;
+	
+	.align-center td {
+		text-align: center;
+	}
+}
+
+.m30-table table tr td {
+	border: 1px solid $fill-black;
+}
+
+
+@media only screen and (min-width:$tablet-breakpoint) {/* tablet */
+
+
+}
+
+
+@media only screen and (min-width:$desktop-breakpoint) {/* desktop */
+
+
+}

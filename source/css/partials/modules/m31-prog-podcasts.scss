@@ -1,0 +1,28 @@
+/*
+===============================================================================
+  module 31 prog podcasts
+===============================================================================
+*/
+
+.m31-prog-podcasts, .m31b-prog-podcasts-with-image {
+	.recommended-play-icon {
+		display: inline-block !important;
+	}
+}
+
+
+@media only screen and (min-width:$tablet-breakpoint) {/* tablet */
+
+
+}
+
+
+@media only screen and (min-width:$desktop-breakpoint) {/* desktop */
+
+	.m31b-prog-podcasts-with-image .play-social-icons-wrapper {
+		position: relative;
+		top: -25px;
+		margin-bottom: -25px;
+	}
+
+}

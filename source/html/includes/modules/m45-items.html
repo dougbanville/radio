@@ -1,0 +1,186 @@
+<!-- eq -->
+<script>
+$(document).ready(function() {
+
+    $("#jquery_jplayer_1").jPlayer({
+        ready: function(event) {
+            $(this).jPlayer("setMedia", {
+				title: "RTE"
+            });
+        },
+        swfPath: "http://jplayer.org/latest/dist/jplayer",
+        supplied: "mp3, oga",
+		wmode: "window",
+		useStateClassSkin: true,
+		autoBlur: false,
+		smoothPlayBar: true,
+		keyEnabled: true,
+		remainingDuration: true,
+		toggleDuration: true,
+		width:"100%",
+		cssSelector: {
+			pause: "#pause"
+		}
+    });
+	
+	
+});
+var playPrefix = "http://podcast.rasset.ie/podcasts/";
+function playItem(url,id){
+		console.log(id);
+		$("#jquery_jplayer_1").jPlayer("setMedia", {mp3:playPrefix + url}).jPlayer("play");
+		//$("#jpplay" + id).hide();
+		$("#jpstop" + id).show();
+		};                                  
+</script>
+<script type="text/javascript">
+function addtoPlaylist(title,mp3,poster){
+	
+			myPlaylist.add({ 
+					'title': "test mc testface", 
+					'mp3': 'http://podcast.rasset.ie/podcasts' + value.downloadPath,
+					'poster': 'http://img.rasset.ie/000c3ce9-707.jpg'
+				});
+	}
+$(document).ready(function(){
+	
+	 var cssSelector = {
+   		jPlayer: "#jquery_jplayer_N",
+		cssSelectorAncestor: "#jp_container_N"
+	};
+	//console.log(cssSelector);
+	var playlist = []; // Empty playlist
+	var options = {
+		swfPath: "../../dist/jplayer",
+		supplied: "webmv, ogv, m4v, oga, mp3",
+		useStateClassSkin: true,
+		autoBlur: false,
+		smoothPlayBar: true,
+		keyEnabled: true,
+		audioFullScreen: true
+	};
+	//console.log(options);
+	
+	var myPlaylist = new jPlayerPlaylist(cssSelector, playlist, options);
+	$.ajax({
+		url:"http://alpha.rte.ie/radio1/feeds/most-popular/?callback=myFunction",
+		jsonp:"callback",
+		dataType:"jsonp",
+		success: function(data){
+			//console.log(data);
+			$.each(data,function(index,value){
+			//myPlaylist.add(value);
+				console.log(value.downloadPath);
+				myPlaylist.add({ 
+					'title': value.title + " " + value.description, 
+					'mp3': 'http://podcast.rasset.ie/podcasts' + value.downloadPath,
+					'poster': 'http://img.rasset.ie/' + value.thumbnailRef + '-642.jpg'
+				});
+			
+			})
+		}
+	});
+	
+	$("#addtoPlaylist").click(function(e){
+		console.log(this.href);
+		e.preventDefault();
+		myPlaylist.add({ 
+					'title': "test mc testface", 
+					'mp3': this.href,
+					'poster': 'http://img.rasset.ie/000c3ce9-707.jpg'
+				},true);
+		
+	});
+	
+	
+});
+</script>
+<div class="row mb2 mt2"><div id="jquery_jplayer_1" class="jp-jplayer"></div></div>
+<div class="row mb2 mt2"><a href="http://www.jplayer.org/audio/mp3/Miaow-02-Hidden.mp3" data="http://podcast.rasset.ie/podcasts/2016/0427/audiobrowse/27042016060000-lyr-martyinthemorning-pid5345-10830000_audio.mp3" id ="addtoPlaylist">Add to PL</a></div>
+<div class="row mb2 mt2">
+    <div class="small-12 medium-8 large-8 columns fixed_height_wrap_m34">
+      <div class="large-12 small-12 columns  p0" style="background:#0A0909;">
+       
+       <!-- here -->
+         <div class="items_header item_main" ><img src ="https://pbs.twimg.com/profile_images/542361506508058626/y9PLq3k4_400x400.jpeg" class="showicon"/>News - Sean O'Rourke interviews Michael Martin</div>
+  <div class="flex-video widescreen fixed_height_wrap_m34">
+        <iframe src="https://www.youtube.com/embed/MCfWXE_vuv4" frameborder="0" allowfullscreen></iframe>
+         </div>
+    <div class="items_footer" ><img src ="https://pbs.twimg.com/profile_images/542361506508058626/y9PLq3k4.jpeg" style="max-height:40px; float:left; border-radius:50%;"/>Hours ago</div>  
+       
+       <!-- /here -->
+       
+       
+      </div>
+    </div>
+    <div class="small-12 medium-4 large-4 columns fixed_height_wrap_m34">
+      <div class="fixed-height-wrapper" style="height:550px;">
+
+      <div class="large-12 columns" style="background:#FFFFFF;">
+   <!-- jplayer -->
+   
+   <div id="jp_container_N" class="jp-video large-12 " role="application" aria-label="media player">
+	<div class="jp-type-playlist">
+		<div id="jquery_jplayer_N" class="jp-jplayer"></div>
+		<div class="jp-gui">
+			<div class="jp-video-play">
+				<button class="jp-video-play-icon recommended-play-icon icon-Play_icon" role="button" tabindex="0">play</button>
+			</div>
+			<div class="jp-interface">
+				<div class="jp-progress">
+					<div class="jp-seek-bar">
+						<div class="jp-play-bar"></div>
+					</div>
+				</div>
+				<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+				<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+				<div class="jp-controls-holder">
+					<div class="jp-controls">
+						<button class="jp-previous" role="button" tabindex="0">previous</button>
+						<button class="jp-play" role="button" tabindex="0">play</button>
+						<button class="jp-next" role="button" tabindex="0">next</button>
+						<button class="jp-stop" role="button" tabindex="0">stop</button>
+					</div>
+					<div class="jp-volume-controls">
+						<button class="jp-mute" role="button" tabindex="0">mute</button>
+						<button class="jp-volume-max" role="button" tabindex="0">max volume</button>
+						<div class="jp-volume-bar">
+							<div class="jp-volume-bar-value"></div>
+						</div>
+					</div>
+					<div class="jp-toggles">
+						<button class="jp-repeat" role="button" tabindex="0">repeat</button>
+						<button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
+						<button class="jp-full-screen" role="button" tabindex="0">full screen</button>
+					</div>
+				</div>
+				<div class="jp-details">
+					<div class="jp-title" aria-label="title">&nbsp;</div>
+				</div>
+			</div>
+		</div>
+		<div class="jp-playlist">
+			<ul>
+				<!-- The method Playlist.displayPlaylist() uses this unordered list -->
+				<li>&nbsp;</li>
+			</ul>
+		</div>
+		<div class="jp-no-solution">
+			<span>Update Required</span>
+			To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+		</div>
+	</div>
+</div>
+   
+   <!-- /jplayer -->
+   
+   
+   
+   </div>
+      </div>
+    </div>
+ 
+    </div>
+<!-- /eq -->
+
+

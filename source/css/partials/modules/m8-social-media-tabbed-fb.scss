@@ -1,0 +1,56 @@
+/*
+===============================================================================
+  module 8 - Social Media Tabbed Fb
+===============================================================================
+*/
+
+.info-tab-content-fb{
+	display: none;
+    width: 100%;
+    height: auto;
+	overflow-x: auto;
+}
+
+.info-tab-content-fb.current{
+	display: inherit;
+}
+
+.tab-toggle-fb:hover {
+	cursor: pointer;
+}
+
+.tab-toggle-fb.tab-toggle-fb--radio1.active-tab-fb {
+	background-color: $fill-blue-radio1;
+	color: $text-white;
+}
+
+.tab-toggle-fb.tab-toggle-fb--2fm.active-tab-fb {
+	background-color: $fill-orange-2fm;
+	color: $text-white;
+}
+
+.tab-toggle-fb.tab-toggle-fb--lyricfm.active-tab-fb {
+	background-color: $fill-purple-lyricfm;
+	color: $text-white;
+}
+
+.tab-toggle-fb.tab-toggle-fb--rnag.active-tab-fb {
+	background-color: $fill-green-rnag;
+	color: $text-white;
+}
+
+.tab-toggle-fb.tab-toggle-fb--digital.active-tab-fb {
+	background-color: $fill-red-digital;
+	color: $text-white;
+}
+
+@media only screen and (min-width:$tablet-breakpoint) {/* tablet */
+
+
+}
+
+
+@media only screen and (min-width:$desktop-breakpoint) {/* desktop */
+
+
+}

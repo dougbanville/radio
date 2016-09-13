@@ -1,0 +1,1747 @@
+<!--(bake includes/page-setup/doctype.html)-->
+
+<head>
+<!--(bake includes/page-setup/meta-header.html title="Input title here")-->
+<!--(bake includes/page-setup/header-scripts.html)-->
+
+<style type="text/css">
+/* css for index page */
+
+.index { background-color: #F4F4F4; }
+.index__container { background-color: #FFF; }
+
+/* index page nav */
+.index__nav { border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+.index__nav a { color:#07E; text-decoration: none; }
+.index__nav a:hover { color: #004488;  }
+.index__nav h2 { margin-top:25px; margin-bottom: 15px; }
+.index__nav__header { margin:20px 0px; }
+.index__nav__header--desktop { display: none; }
+.index__nav__header--mobile { display: inline-block; clear: both; width: 100%;  }
+.index__nav__header--mobile__text { float: left; }
+.index__nav__header__caret {  float: right; margin-top: 10px; }
+.index__nav__header__caret__down, .index__nav__header__caret__up { width: 25px; height: 25px; }
+.index__nav__header__caret__up { display: none; }
+.index__nav__items { display: none; }
+.index__nav__items h2 { font-size: 20px; }
+.js-nav--show .index__nav__items { display: block; }
+.index__nav__items__list { list-style: none;  margin: 0px; padding: 0px; }
+.index__nav__items__list li { padding: 10px 0px;}
+.index__nav__items__sublist { display: none; font-size: 14px; list-style: none; padding-left: 20px; }
+.index__nav__items__sublist li:last-child { padding-bottom: 0px; }
+.index__nav__title { font-weight: bold; padding: 10px 0px; }
+
+/* index page main content */
+.index__main-content__section { background: #F4F4F4; margin: 20px 0px; padding: 20px; border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 3px; }
+.index__main-content__section__header { padding-bottom: 20px; border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+.index__main-content__section__header a, .index__main-content__section__header a:hover { color: #000;}
+.index__main-content__sub-section { padding-bottom:50px; }
+.index__main-content__sub-section:last-child { padding-bottom: 0px; }
+.index__main-content__sub-section__heading { font-size: 20px; font-weight: bold; }
+.index__main-content__sub-section__heading a, .index__main-content__sub-section__heading a:hover { color: #000;}
+
+/* index page code styles */
+.index__main-content__code { margin-bottom: 30px; }
+.index__main-content__code__title { color: #4A4A4A; font-weight: bold; font-size: 14px; }
+.index__main-content__code pre { background: #FFF; padding:10px; margin: 10px; }
+.index__main-content__code pre code { white-space: pre-wrap; -webkit-font-smoothing: antialiased; line-height: 1.75; }
+code .hljs-tag { color: #000080; }
+code .hljs-title { color:#000080; }
+code .hljs-attribute { color:#008080; } 
+code .hljs-value, .js-highlight { color:#D14; }
+.index__main-content__code__values { color: #999; margin-left: 15px; }
+
+/* index page release note */
+.index__release-note { border-bottom: 1px solid rgba(0, 0, 0, 0.1); padding-top: 20px; }
+.index__release-note__date { font-size: 14px; color: #999; }
+.index__release-note__version { color: #999; padding-right: 15px; }
+
+/* index page - page builds */
+.index__page-build__link--development { color:#FFA500; }
+.index__page-build__link--no-development { color:#999; }
+.index__page-build__link--review { color:#CC2020; }
+.index__page-build__link--complete { color:#008000; }
+.index__page-build__stage { font-weight: bold; }
+
+@media only screen and (min-width:768px) {/* tablet */
+
+.index { padding: 20px; }
+.index__container { border: 1px solid rgba(0, 0, 0, 0.3); border-radius: 3px; }
+
+/* index page nav */
+.index__nav { padding: 0px; border-bottom: none; }
+.index__nav__wrapper { position: fixed;  padding: 20px; overflow: auto; height: 90%; width: 250px; }
+.index__nav__header--desktop { display: block; }
+.index__nav__header--mobile { display: none; } 
+.index__nav__header__caret { display: none; } 
+.index__nav__items { display: block; }
+
+/* index page main content */
+.index__main-content__wrapper { padding: 20px; }
+
+}
+</style>
+</head>
+
+<body>
+
+
+<div class="wrapper index">
+  <div class="row index__container">
+  
+  <!-- navigation -->	
+  <nav class="index__nav small-12 medium-3 large-3 columns">
+  	<div class="index__nav__wrapper">
+      <h1 class="index__nav__header">
+      <div class="index__nav__header--desktop">RTE Radio</div>
+      <div class="index__nav__header--mobile"> <div class="index__nav__header--mobile__text ">RTE Radio</div>
+        <div class="index__nav__header__caret"><div class="icon-arrow_down index__nav__header__caret__down"></div><div class="icon-arrow_up index__nav__header__caret__up"></div></div>
+      </div>
+      </h1>
+      <div class="index__nav__items">
+      <ol class="index__nav__items__list">
+        <li> <a href="#intro">Introduction</a> </li>
+        <li> <a href="#release-notes">Release Notes</a> </li>        
+        <li> <a href="#" class="js-show-nav-sublist">Frontend Process</a>
+          <ul class="index__nav__items__sublist">
+            <li><a href="#responsive">Responsive</a></li>
+            <li><a href="#framework">Framework</a></li>
+            <li><a href="#coding">Coding</a></li>
+            <li><a href="#imagery">Imagery</a></li>
+            <li><a href="#seo">SEO</a></li>
+            <li><a href="#accessibility">Accessibility</a></li>
+          </ul>
+        </li>
+        <li> <a href="#" class="js-show-nav-sublist">Guidelines</a>
+          <ul class="index__nav__items__sublist">
+            <li><a href="#svn">SVN</a></li>
+            <li><a href="#inline-styles">Inline Styles</a></li>
+            <li><a href="#breakpoints">Breakpoint</a></li>
+            <li><a href="#comments">Comments</a></li>
+            <li><a href="#naming-conventions-file">File Naming Conventions</a></li>
+            <li><a href="#naming-conventions-css">CSS Naming Conventions</a></li>
+            <li><a href="#images">Images</a></li>
+            <li><a href="#testing">Frontend Testing</a></li>
+          </ul>
+        </li>        
+      </ol>
+      <h2>Page Development</h2>
+      <ol class="index__nav__items__list">
+      	<li> <a href="#" class="js-show-nav-sublist">Module Handover</a>
+          <ul class="index__nav__items__sublist">
+            <li><a href="#overview-mods">Overview</a></li>
+            <li><a href="#page-setup-mods">Page-Setup Modules</a></li>
+            <li><a href="#header-mods">Header Modules</a></li>
+            <li><a href="#footer-mods">Footer Modules</a></li>
+            <li><a href="#page-mods">Page Modules</a></li>
+            <li><a href="#lightbox-mods">Lightbox Modules</a></li>
+          </ul>
+        </li>
+      	<li> <a href="#page-builds">Page Builds</a> </li>
+      </ol> 
+     <!-- <h2>Style Guide</h2>
+      <div class="index__nav__title">Branding</div>
+      <ol class="index__nav__items__list">      	
+        <li> <a href="#" class="js-show-nav-sublist">Colors</a>
+          <ul class="index__nav__items__sublist">
+            <li><a href="#fill-colors">Fill Colors</a></li>
+            <li><a href="#text-colors">Text Colors</a></li>
+            <li><a href="#link-colors">Link Colors</a></li>
+          </ul>
+        </li>
+        <li> <a href="#webfonts">Webfonts</a> </li>
+      </ol>
+      <div class="index__nav__title">Layout</div>
+      <ol class="index__nav__items__list">      	        
+        <li> <a href="#grid">Grid</a> </li>        
+        <li> <a href="#" class="js-show-nav-sublist">Layout</a>
+          <ul class="index__nav__items__sublist">
+            <li><a href="#floats">Floats</a></li>
+            <li><a href="#display">Display</a></li>
+            <li><a href="#overflow">Overflow</a></li>
+            <li><a href="#width-and-height">Width and Height</a></li>
+            <li><a href="#spacing-prefixes">Spacing Prefixes</a></li>
+            <li><a href="#margin">Margin</a></li>
+            <li><a href="#padding">Padding</a></li>
+            <li><a href="#positioning">Positioning</a></li>
+          </ul>
+        </li>
+      </ol>
+      <div class="index__nav__title">Utilities</div>
+      <ol class="index__nav__items__list">
+        <li> <a href="#" class="js-show-nav-sublist">Typography</a>
+          <ul class="index__nav__items__sublist">
+            <li><a href="#headers">Headers and Sizes</a></li>
+            <li><a href="#paragraph">Paragraphs</a></li>
+            <li><a href="#emphasis">Emphasis</a></li>
+            <li><a href="#overflow-typography">Overflow</a></li>
+            <li><a href="#alignment">Alignment</a></li>
+            <li><a href="#lists">Lists</a></li>
+          </ul>
+        </li>
+        <li> <a href="#" class="js-show-nav-sublist">Borders</a>
+          <ul class="index__nav__items__sublist">
+            <li><a href="#borders">Borders</a></li>
+            <li><a href="#lighter-borders">Lighter Borders</a></li>
+            <li><a href="#removing-borders">Removing Borders</a></li>
+            <li><a href="#rounded-corners">Rounded Corners</a></li>
+            <li><a href="#circles">Circles</a></li>
+          </ul>
+        </li>
+        <li> <a href="#" class="js-show-nav-sublist">Buttons</a>
+          <ul class="index__nav__items__sublist">
+            <li><a href="#primary-buttons">Primary Buttons</a></li>
+            <li><a href="#secondary-buttons">Secondary Buttons</a></li>
+            <li><a href="#disabled-buttons">Disabled Buttons</a></li>
+            <li><a href="#small-buttons">Small Buttons</a></li>
+          </ul>
+        </li>        
+        <li> <a href="#" class="js-show-nav-sublist">Forms</a>
+          <ul class="index__nav__items__sublist">
+            <li><a href="#form-labels">Form Labels</a></li>
+            <li><a href="#text-inputs">Text Inputs</a></li>
+            <li><a href="#helper-text">Helper Text</a></li>
+            <li><a href="#textareas">Textareas</a></li>
+            <li><a href="#select-fields">Select Fields</a></li>
+            <li><a href="#radio-buttons">Radio Buttons</a></li>
+            <li><a href="#checkboxes">Checkboxes</a></li>
+            <li><a href="#small-form-labels">Small Form Labels</a></li>
+            <li><a href="#small-text-inputs">Small Text Inputs</a></li>
+            <li><a href="#small-textareas">Small Textareas</a></li>
+            <li><a href="#small-select-fields">Small Select Fields</a></li>
+            <li><a href="#form-warnings">Form Warnings</a></li>
+            <li><a href="#form-errors">Form Errors</a></li>
+            <li><a href="#form-success">Form Success</a></li>
+          </ul>
+        </li>
+        <li> <a href="#" class="js-show-nav-sublist">Tables</a>
+          <ul class="index__nav__items__sublist">
+            <li><a href="#default-table">Default Table</a></li>
+            <li><a href="#bordered-table">Bordered Table</a></li>
+            <li><a href="#scroll-table">Scroll Table</a></li>
+            <li><a href="#faux-table-layout">Faux Table Layout</a></li>
+          </ul>
+        </li>
+      </ol>-->
+      </div>
+    </div>
+  </nav>
+  <!-- end of nav -->
+
+  <!-- main content -->
+  <div class="index__main-content small-12 medium-9 large-9 columns">
+    <div class="index__main-content__wrapper">
+		
+		<!-- introduction -->
+		<div class="index__main-content__section">			
+			<h2 class="index__main-content__section__header"><a name="intro">Introduction</a></h2>
+			<p>This page contains all neccessary elements for startup of a Frontend project including Frontend Process, Guidelines, Page links, Module Handover.</p>
+			<ul>
+			  <li><strong>Project Title:</strong> <em>RTE Radio</em> </li>
+			  <li><strong>Developers:</strong> <em>Michael Hanton</em> </li>
+			</ul>
+			<p>The CSS setup is influenced by frameworks like <a href="http://www.basscss.com/">Basscss</a> and <a href="http://solid.buzzfeed.com/release-notes.html">Solid</a>, it is founded based on <a href="http://patternlab.io/about.html">atomic design</a>. Basic utilities, buttons, forms, typography ..ect, and components are available to help new projects set up quickly. They are the building blocks for modules. Again the CSS set up here will change for projects but the structure laid out should stay the same.</p>
+		</div>		
+			
+		<!-- release notes -->
+		<div class="index__main-content__section">			
+			<h2 class="index__main-content__section__header"><a name="release-notes">Release Notes</a></h2>
+			<p>Any changes made to this grunt template, either CSS, HTML or content related, please note in release note giving date and list of changes
+			<div class="index__release-note">
+        <h3 class="index__main-content__sub-section__heading"><span class="index__release-note__version">1.0.1</span>Update to Guidelines</h3>
+        <p class="index__release-note__date">13/01/2016</p>
+        <ul>
+          <li>Updates to <strong>Guidelines</strong> section. New/updated sub-sections: File Naming Conventions, CSS Naming Conventions ,Images, Frontend Testing.</li>
+        <ul>
+      </div>
+      <div class="index__release-note">
+				<h3 class="index__main-content__sub-section__heading"><span class="index__release-note__version">1.0</span>First Release</h3>
+				<p class="index__release-note__date">21/01/2016 - Michael Keane</p>
+				<ul>
+					<li>First release of grunt template</li>
+				<ul>
+			</div>
+		</div>		
+
+		<!-- process -->
+		<div class="index__main-content__section">
+			<h2 class="index__main-content__section__header">Process</h2>
+			<p>The following is the approach the frontend developer will take on the project. It will be detailed during scoping of project with the Head of Frontend and any updates will be noted here.</p>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="responsive">Responsive</a></h3>
+				<ul>
+				  <li>The project will be developed using the latest scripts (i.e. latest JQuery 1.11)</li>
+				  <li>The RWD framework is only one view, there isn't different content injected for different devices.</li>
+				  <li>Page speed will be based on the below framework/coding/SEO/Accessibility choices as well as the 3rd party or web services</li>
+				  <li>Styles will be based on a style guide complete in design. There should not be bespoke elements for a single section. Elements should be usable in all areas.</li>
+				  <li>We will be using a modular approach to maintain consistency and to aid further deployment. (i.e. If a font size is changed in one place it will change everywhere)</li>
+				</ul>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="framework">Framework</a></h3>
+				<ul>
+				  <li>The project will be developed using a CSS framework. It will be <a href="http://foundation.zurb.com/">Foundation</a>.</li>
+				  <li>The framework will not allow for different grids on a per section basis . Therefore PSD designs need to follow the framework schema.</li>
+				  <li>Stacking is handled by the framework 
+				  	<ul>
+				  	  <li>Possible stacking for each can be seen in the <a href="http://foundation.zurb.com/docs/components/grid.html">Foundation Grid</a></li>
+				  	  <li>It is not possible to break how the stacking is handled without effecting performance (page speed, seo, accessibility).</li>
+				  	  <li>It is not possible to move elements from the bottom of the page to the top without having duplicate code (Bad process, will affect performance(page speed, seo, accessibility))</li>
+				  	</ul>
+				  </li>
+				</ul>
+
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="coding">Coding</a></h3>
+				<ul>
+				  <li>Each project will use HTML5, CSS3 and modern jQuery techniques.</li>
+				  <li>The project will be built for modern browsers and devices. IE10 and IE9 browser versions will be supported with graceful degregation. Older IE browser versions will not be supported in this project.</li>
+				  <li>BAT testing will be carried out modern devices via in studio and virtual machines. We will test against latest versions of IE, Firefox, Safari and Chrome, IOS and Android.</li>
+				  <li>We will be compiling code using Grunt.js meaning it is critical to have a single repository. This will be on SVN.</li>
+				  <li>Responsive elements such as tables and images will need defined structure and classes (i.e. there won't be the abiliy to insert existing content into these)</li>
+				</ul>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="imagery">Imagery</a></h3>
+				<ul>
+				  <li>PNG images will be used throughout. </li>
+				  <li>SVG images will be used for icons, with fallback PNGs.</li>
+				  <li>Images can be run through an image compression software - <a href="http://pnggauntlet.com/">PNG Gauntlet</a>. No images have been compressed as they are only placeholders.</li>
+				  <li>Images within content that would generally be content managed will be down to the CMS/user.</li>
+				</ul>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="seo">SEO - not in scope for this project</a></h3>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="accessibility">Accessibility - no specific criteria for this project</a></h3>
+			</div>
+		</div>
+
+		<!-- guidelines -->
+		<div class="index__main-content__section">
+			<h2 class="index__main-content__section__header">Guidelines</h2>
+			<p>The below are guidelines for developers working on this project. Update on a project to project basis.</p>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="svn">SVN</a></h3>
+				<p>Please follow the following steps when commiting a change to the SVN:</p>
+				<ol>
+				  <li>Update SVN</li>
+				  <li>Detailed comments of changes</li>
+				  <li>Commit</li>
+				</ul>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="inline-styles">Inline Styles</a></h3>
+				<p>Refrain from inline styles and inline JS please :)</p>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="breakpoints">Breakpoint</a></h3>
+				<p>The following breakpoints are used for this project</p>
+				<ul>
+				  <li>mobile: <strong>320px</strong></li>
+				  <li>tablet: <strong>768px</strong></li>
+				  <li>desktop: <strong>1024px</strong></li>
+				  <li>max width: <strong>1440px</strong></li>
+				</ul>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="comments">Comments</a></h3>
+				<p>Please follow the following comment guides. Please keep all lowercase</p>
+				<ul>
+				  <li>
+				    <p>HTML<br>&lt;!-- comment goes here --&gt;</p>
+				  </li>
+				  <li>
+				    <p>SCSS<br>/*-- comment goes here --*/<br>Please comment each new scss file at the top to explain usage. Follow existing format</p>
+				  </li>
+				  <li>
+				    <p>JS<br>// comment goes here</p>
+				  </li>
+				</ul> 
+			</div>
+			<div class="index__main-content__sub-section">
+				<h3 class="index__main-content__sub-section__heading"><a name="#naming-conventions-file">File Naming Conventions</a></h3>
+				<p>For each new module HTML and SCSS need to follow the same naming convention:</p>
+				<ul>
+			      <li>m1-module-name.html</li>
+				  <li>m1-module-name.scss</li>
+				  <li>The main class wrapper for each module should be .m1-module-name. Each class in the scss module should fall under .m1-module-name class</li>
+				</ul>
+				<p>Any JS class/id should follow:</p>
+				<ul>
+				  <li>js-class-name</li>
+				</ul>
+			</div>
+      <div class="index__main-content__sub-section">        
+        <h3 class="index__main-content__sub-section__heading"><a name="naming-conventions-css">CSS Naming Conventions</a></h3>
+        <p><strong>BEM</strong> – meaning block, element, modifier – is a front-end CSS naming methodology used in this project. The naming convention follows this pattern:</p>
+        <ul>
+          <li><code class="js-highlight">.block {}</code></li>
+          <li><code class="js-highlight">.block__element {}</code></li>
+          <li><code class="js-highlight">.block--modifier {}</code></li>
+        </ul>
+        <p><code class="js-highlight">.block</code> represents the higher level of an abstraction or component.</p>
+        <p><code class="js-highlight">.block__element</code> represents a descendent of <code class="js-highlight">.block</code> that helps form <code class="js-highlight">.block</code> as a whole.</p>
+        <p><code class="js-highlight">.block__element</code> represents a different state or version of <code class="js-highlight">.block</code>.</p>
+        <p>For more information see the <a href="https://bem.info/">BEM site</a>. Try to follow BEM as much as possible to keep code constant.</p>
+      </div>
+      <div class="index__main-content__sub-section">        
+        <h3 class="index__main-content__sub-section__heading"><a name="images">Images</a></h3>
+        <ul>
+          <li>Please use either the following reference in CSS/JS: src="<strong>images</strong>/foldername/image.png” <em>or</em> src="<strong>../images</strong>/foldername/image.png”.</li>
+          <li>Make all images <strong>PNG</strong>.</li>
+          <li>Make all icons <strong>SVG</strong>.</li>
+          <li>Make alt <strong>=”placeholder text”</strong> where will be content editable. Likewise for title elements.</li>
+          <li>Make clear when images are placeholders by using clear naming convention - <strong>placeholder-banner.png”</strong></li>
+          <li>Avoid <strong>--</strong> in naming convention for images as it doesn't work within CMS.</li>
+        </ul>
+      </div>
+      <div class="index__main-content__sub-section">        
+        <h3 class="index__main-content__sub-section__heading"><a name="testing">Frontend Testing</a></h3>
+        <p>Frontend testing must be carried out on following browser/devices:</p>
+        <ul>
+          <li>Firefox - latest</li>
+          <li>Chrome - latest</li>
+          <li>Safari - latest</li>
+          <li>IE - 10+</li>
+          <li>Android - latest</li>
+          <li>IOS - latest iPad/iPhone</li>
+          <li>Windows Phone - latest</li>
+        </ul>
+        <p>If access is not available to devices then testing can be carried out on <a href="http://browserstack.com/">BrowserStack</a>.</p>
+      </div>
+		</div>
+
+		<!-- module handover -->
+		<div class="index__main-content__section">			
+			<h2 class="index__main-content__section__header">Module Handover</h2>
+      <p>Developers need to update the text <em>'/cms-location/'</em> in the the Gruntfile.js with the image location of the CMS being used so that the all CSS and JS references to images in the <strong>cms-export</strong> folder is correct.</p> 
+			<p>Outline below instructions for developers on intigrating modules in CMS and there upkeep. See example outlined below:</p>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="overview-mods">Overview</a></h3>
+				<p>Any HTML code being used for CMS intigration must come from the source folder only - <strong>source\html</strong></p>
+				<p>Within the source of HTML pages you will find links to specific HTML references modules located in the <strong>lightboxes</strong> and <strong>includes</strong> folder.</p>
+				<p>Update your SVN and run grunt.</p>
+				<p>Any files/resources added to CMS are to be taken form the ‘<strong>cms-export</strong>’ which is built when grunt is run. It should include the following:-</p>
+				<ul>
+					<li>All <strong>CSS</strong> for CMS</li>
+					<li>All <strong>JS</strong> for CMS</li>
+					<li>All <strong>Webfonts</strong> for CMS</li>
+				</ul>
+				<p>All required files for templates will be found in each individual HTML file (named as per UI spec) via modules.</p>
+				<p>Frontend Dev will provide link to images need to be added to the galleries. These images will need to be run through <a href="http://pnggauntlet.com/">PNG gauntlet</a> or preferred image compiler. Note - Most images used during frontend build are placeholders only and should be updated by content with appropriate naming conventions.</p>
+				<ul>
+					<li>source/resources/images/example.png</li>
+					<li>source/resources/images/example.png</li>
+				</ul>
+				<p>All <strong>Alt</strong> and <strong>Title</strong> attributes need to be updated on content migration. Placeholder text put in place in frontend templates</p>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="page-setup-mods">Page-Setup Modules</a></h3>
+				<p>Location - <strong>source\html\includes\page-setup</strong></p>
+				<table class="table__border fill-white">
+					<tr class="fill-grey">
+					<th scope="col">doctype.html</th>
+					</tr>
+					<tr>
+					<td>Doctype at beginning of each page. Contains CSS conditional comments. Will be consistent throughout each page on website.</td>
+					</tr>
+					<tr class="fill-grey">
+					<th scope="col">head-scripts.html</th>
+					</tr>
+					<tr>
+					<td>Contains JavaScript files that are used globally throughout the site. jquery.min.js and global.min.js are included.Will be consistent throughout each page on website.</td>
+					</tr>
+					<tr class="fill-grey">
+					<th scope="col">meta-header.html</th>
+					</tr>
+					<tr>
+					<td>Contains the meta tags for pages. Meta tags vary page to page need to be made <strong>contenteditable</strong> - meta <strong>description</strong> and <strong>keywords</strong>, as well as the title tag. Contains CSS files which are used globally throughout the site including ‘global.min.css’</td>
+					</tr>
+				</table>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="header-mods">Header Modules</a></h3>
+				<p>Location - <strong>source\html\includes\header</strong></p>
+				<table class="table__border fill-white">
+					<tr class="fill-grey">
+					<th scope="col">header</th>
+					</tr>
+					<tr>
+					<td>Header as per rte.ie/bosco</td>
+					</tr>
+				</table>
+			</div>	
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="footer-mods">Footer Modules</a></h3>
+				<p>Location - <strong>source\html\includes\footer</strong></p>
+				<table class="table__border fill-white">
+					<tr class="fill-grey">
+					<th scope="col">Footer</th>
+					</tr>
+					<tr>
+					<td>Footer as per rte.ie/bosco</td>
+					</tr>
+				</table>
+			</div>	
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="page-mods">Page Modules</a></h3>
+				<p>Location HTML- <strong>source\html\includes\modules</strong></p>
+				<p>Location CSS - <strong>source\css\includes\modules</strong></p>
+				<table class="table__border fill-white">
+					<tr class="fill-grey">
+					<th scope="col">Modules List</th>
+					</tr> 
+					<tr>
+					<td>Each module in the modules html folder has a corresponding css file of the same name. To override styles for each of the radio brands there is a css file css\partials\global\brand\colour-override.scss</td>
+					</tr>
+				</table>
+			</div>			
+		</div>
+
+		<!-- page builds -->
+		<div class="index__main-content__section">			
+			<h2 class="index__main-content__section__header"><a name="page-builds">Page Builds</a></h2>
+			<p>Provide below list of pages to be built in project. Highlight pages that are not in development, in development, under review and complete.</p>
+			<p>The below is a list of page builds for the project made up of templates and modules. Please note that while under development these links may change and are not to be initgrated into any CMS until fully signed off by the client.</p>
+			<ul>
+			  <li><a class="index__page-build__link--complete" href="http://localhost:9000/p01-homepage.html">P.01 Homepage<span class="index__page-build__stage"> --- Complete</span></a></li>
+			  <li><a class="index__page-build__link--complete" href="http://localhost:9000/p02-radio-station.html">P.02 Radio Station (Radio 1)<span class="index__page-build__stage"> --- Complete</span></a></li>
+			  <li><a class="index__page-build__link--complete" href="http://localhost:9000/p02b-radio-station-2fm.html">P.02b Radio Station (2FM)<span class="index__page-build__stage"> --- Complete</span></a></li>
+			  <li><a class="index__page-build__link--complete" href="http://localhost:9000/p02c-radio-station-lyricfm.html">P.02c Radio Station (Lyric FM)<span class="index__page-build__stage"> --- Complete</span></a></li>
+			  <li><a class="index__page-build__link--complete" href="http://localhost:9000/p02d-radio-station-rnag.html">P.02d Radio Station (RnaG)<span class="index__page-build__stage"> --- Complete</span></a></li>
+			  <li><a class="index__page-build__link--complete" href="http://localhost:9000/p03-search-results.html">P.03 Search Results<span class="index__page-build__stage"> --- Complete</span></a></li>
+			  <li><a class="index__page-build__link--complete" href="http://localhost:9000/p04-programme-page.html">P.04 Programme Page<span class="index__page-build__stage"> --- Complete</span></a></li>
+			  <li><a class="index__page-build__link--complete" href="http://localhost:9000/p05-podcast-page.html">P.05 Podcast Page<span class="index__page-build__stage"> --- Complete</span></a></li>
+			  <li><a class="index__page-build__link--complete" href="http://localhost:9000/p06-generic-page.html">P.06 Generic Page<span class="index__page-build__stage"> --- Complete</span></a></li>
+			</ul>			
+		</div>
+			
+		<!-- colors 
+		<div class="index__main-content__section">
+			<h2 class="index__main-content__section__header">Colors</h2>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="fill-colors">Fill Colors</a></h3>
+				<p>Set out all project brand colors below as per example. There should be no colors used in development that have not come from designs. The project designer should outline all brand colors including lighter or darker variations. Naming methodology should be discussed with designer. It's important to outline here the context and usages when using these fills.</p>
+				<div class="index__main-content__code">
+				  <p><code class="js-highlight">.fill-blue</code>
+       			  <span class="index__main-content__code__values">#07E, $fill-blue</span></p>
+				  <div class="border p1 m1 fill-blue">.fill-blue</div>
+				  <p><code class="js-highlight">.fill-black</code>
+       			  <span class="index__main-content__code__values">#000, $fill-black</span></p>
+				  <div class="border p1 m1 fill-black text-white">.fill-black</div>
+				  <p><code class="js-highlight">.fill-grey</code>
+       			  <span class="index__main-content__code__values">#AAA, $fill-grey</span></p>
+				  <div class="border p1 m1 fill-grey">.fill-grey</div>
+				  <p><code class="js-highlight">.fill-red</code>
+       			  <span class="index__main-content__code__values">#E32, $fill-red</span></p>
+				  <div class="border p1 m1 fill-red">.fill-red</div>
+				  <p><code class="js-highlight">.fill-white</code>
+       			  <span class="index__main-content__code__values">#FFF, $fill-white</span></p>
+				  <div class="border p1 m1 fill-white">.fill-white</div>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="text-colors">Text Colors</a></h3>
+				<p>Set out all project brand text colors below as per example. Again there should be no colors used in development that have not come from designs. The project designer should outline all text colors including lighter or darker variations, hover and focus states. It's important to outline here the context and usages of the text colors as in below example.</p>
+				<div class="index__main-content__code">
+				  <p><code class="js-highlight">.text-blue</code>
+       			  <span class="index__main-content__code__values">#07E, $text-blue</span></p>
+				  <p class="text-blue">This is the standard link color. It's on links by default.</p>
+				  <p><code class="js-highlight">.text-black</code>
+       			  <span class="index__main-content__code__values">#000, $text-black</span></p>
+				  <p class="text-black">This is the default text color.</p>
+				  <p><code class="js-highlight">.text-grey</code>
+       			  <span class="index__main-content__code__values">#AAA, $text-grey</span></p>
+				  <p class="text-grey">This is the darkest gray color.</p>
+				  <p><code class="js-highlight">.text-red</code>
+       			  <span class="index__main-content__code__values">#E32, $text-red</span></p>
+				  <p class="text-red">This is red text used for error messaging.</p>
+				  <p><code class="js-highlight">.text-white</code>
+       			  <span class="index__main-content__code__values">#FFF, $text-white</span></p>
+				  <p class="text-white fill-black">White text for dark backgrounds.</p>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="link-colors">Link Colors</a></h3>
+				<p>Find below primary links color variations. By default, a tags will get the same styling as elements with the class.</p>
+				<div class="index__main-content__code">
+				  <p><code class="js-highlight">a</code>, <code class="js-highlight">.link-blue</code></p>
+				  <p><a href="#">This is the default blue link style.</a></p>
+				  <p><code class="js-highlight">.link-grey</code></p>
+				  <p><a href="#" class="link-grey">This is the grey link style.</a></p>
+				</div>
+			</div>
+		</div>-->
+			
+		<!-- webfonts 
+		<div class="index__main-content__section">
+			<h2 class="index__main-content__section__header"><a name="webfonts">Webfonts</a></h2>
+			<div class="index__main-content__sub-section">			
+				<p>To set up webfonts for a project first add all webfont files to the <strong>source\webfonts</strong> folder.
+				<p>Then within <strong>source\css\partials\global\brand\webfonts.scss</strong>, using the <code class="js-highlight">@font-face</code> rule, define a name for the font (e.g. GT-Walsheim-Bold), and then point to the font files stored in the <strong>source\webfonts</strong> folder. See example below</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">CSS</p>
+				  <pre><code class="css">@font-face {
+	font-family: 'GT-Walsheim-Bold';
+	src: url('../webfonts/GT-Walsheim-Bold.eot?') format('eot'), 
+	     url('../webfonts/GT-Walsheim-Bold.woff') format('woff'), 
+	     url('../webfonts/GT-Walsheim-Bold.ttf')  format('truetype'),
+	     url('../webfonts/GT-Walsheim-Bold.svg#GT-Walsheim-Bold') format('svg');
+}</code></pre>
+				</div>
+				<p>Within the <strong>source\css\partials\helpers\variables.scss</strong> file then set up the helper variables for the fonts like so:</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">CSS</p>
+				  <pre><code class="css">$brand-font--bold: 'GT-Walsheim-Bold', 'Arial'</code></pre>
+				</div>
+				<p>Finally update this section with list of variable names for fonts and indicate rules of usage based on the project designs.</p>
+			</div>
+		</div>-->
+			
+		<!-- grid 
+		<div class="index__main-content__section">
+			<h2 class="index__main-content__section__header"><a name="grid">Grid</a></h2>
+			<div class="index__main-content__sub-section">			
+				<p>The default grid set up in this template is Foundation. The code is located in the <strong>source\css\partials\global\layout.scss file</strong>. The develope can choose to use which ever framework suits on a project to project basis. Once the grid is setup for the project the developer must outline whats being used and example of its usage in this secation. Below is a basic example. 
+				<p>This project uses <strong>Foundation's Grid</strong>. Foundation is <strong>mobile-first</strong>. Code for small screens first, and larger devices will inherit those styles. Customize for larger screens as necessary.</p>
+				<p>Start by adding an element with a class of row. This will create a horizontal block to contain vertical columns. Then add divs with a column class within that row. You can use column or columns - the only difference is grammar. Specify the widths of each column with the small-#, medium-#, and large-# classes.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;small-2 large-4 columns&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;small-4 large-4 columns&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;small-6 large-4 columns&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;large-3 columns&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;large-6 columns&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;large-3 columns&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;small-6 large-2 columns&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;small-6 large-8 columns&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;small-12 large-2 columns&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;small-3 columns&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;small-9 columns&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;large-4 columns&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;large-8 columns&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;small-6 large-5 columns&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;small-6 large-7 columns&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;large-6 columns&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;large-6 columns&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  	<div class="row border mb1">
+					  <div class="small-2 large-4 columns">small-2 large-4</div>
+					  <div class="small-4 large-4 columns">small-4 large-4</div>
+					  <div class="small-6 large-4 columns">small-6 large-4</div>
+					</div>
+					<div class="row border mb1">
+					  <div class="large-3 columns">large-3</div>
+					  <div class="large-6 columns">large-6</div>
+					  <div class="large-3 columns">large-3</div>
+					</div>
+					<div class="row border mb1">
+					  <div class="small-6 large-2 columns">small-6 large-2</div>
+					  <div class="small-6 large-8 columns">small-6 large-8</div>
+					  <div class="small-12 large-2 columns">small-12 large-2</div>
+					</div>
+					<div class="row border mb1">
+					  <div class="small-3 columns">small-3</div>
+					  <div class="small-9 columns">small-9</div>
+					</div>
+					<div class="row border mb1">
+					  <div class="large-4 columns">large-4</div>
+					  <div class="large-8 columns">large-8</div>
+					</div>
+					<div class="row border mb1">
+					  <div class="small-6 large-5 columns">small-6 large-5</div>
+					  <div class="small-6 large-7 columns">small-6 large-7</div>
+					</div>
+					<div class="row border">
+					  <div class="large-6 columns">large-6</div>
+					  <div class="large-6 columns">large-6</div>
+					</div>
+				</div>
+				<p>For more information on grid please see the <a href="http://foundation.zurb.com/sites/docs/v/5.5.3/components/grid.html">Foundation documentation</a></p>
+				<p>In addition this project uses <a href="http://flexboxgrid.com/">Flexbox Grid</a> for embellishments on modern browers, such as matching heights as an alternative for js (improve page speed - better for SEO). Don’t know flexbox? wanna learn? <a href="http://flexboxfroggy.com/">Try this</a><p>
+			</div>
+		</div>-->
+			
+		<!-- layout 
+		<div class="index__main-content__section">
+			<h2 class="index__main-content__section__header">Layout</h2>
+			<div class="index__main-content__sub-section">
+				<h3 class="index__main-content__sub-section__heading"><a name="floats">Floats</a></h3>
+				<p>Use <code class="js-highlight">.float-left</code>, <code class="js-highlight">.float-right</code> and <code class="js-highlight">.float-none</code> to float elements.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;div class=&quot;clearfix&quot;&gt;
+  &lt;div class=&quot;float-left&quot;&gt;.float-left&lt;/div&gt;
+  &lt;div class=&quot;float-right&quot;&gt;.float-right&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;float-none&quot;&gt;.float-none&lt;/div&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <div class="clearfix">
+				    <div class="float-left">.float-left</div>
+					 <div class="float-right">.float-right</div>
+				   </div>
+				   <div class="float-none">.float-none</div>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="display">Display</a></h3>
+				<p>Use <code class="js-highlight">.hide-elem</code>, <code class="js-highlight">.inline</code>, <code class="js-highlight">.inline-block</code> and <code class="js-highlight">.block</code> to change an element's display.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;div&gt;
+  &lt;div class=&quot;hide-elem&quot;&gt;.hide-elem&lt;/div&gt;
+  &lt;div class=&quot;inline border mr1&quot;&gt;.inline&lt;/div&gt;
+  &lt;div class=&quot;inline-block border&quot;&gt;.inline-block&lt;/div&gt;
+  &lt;a href=&quot;#&quot; class=&quot;block border mt1&quot;&gt;.block&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <div>
+  				    <div class="hide-elem">.hide-elem</div>
+				    <div class="inline border mr1">.inline</div>
+  				    <div class="inline-block border">.inline-block</div>
+  				    <a href="#" class="block border mt1">.block</a> 
+				  </div>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="overflow">Overflow</a></h3>
+				<p>Use <code class="js-highlight">.overflow-hidden</code>, <code class="js-highlight">.overflow-auto</code>, <code class="js-highlight">.overflow-scroll</code> and <code class="js-highlight">.overflow-visible</code> to change an element's overflow behavior. Inline CSS is used here only for example purposes. Do not use in project.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;div class=&quot;overflow-hidden border p2 mb2&quot; style=&quot;height:85px;&quot;&gt;
+  &lt;p class=&quot;mb1&quot;&gt;.overflow-hidden&lt;/p&gt;
+  &lt;p&gt;...&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;overflow-auto border p2 mb2&quot; style=&quot;height:85px;&quot;&gt;
+  &lt;p class=&quot;mb1&quot;&gt;.overflow-auto&lt;/p&gt;
+  &lt;p&gt;...&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;overflow-scroll border p2 mb2&quot; style=&quot;height:85px;&quot;&gt;
+  &lt;p class=&quot;mb1&quot;&gt;.overflow-scroll&lt;/p&gt;
+  &lt;p&gt;...&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <div class="overflow-hidden border p2 mb2" style="height:85px;">
+				    <p class="mb1">.overflow-hidden</p>
+				    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam euismod a justo ac laoreet. Fusce in semper sem. Proin porttitor pretium sodales. Duis laoreet quam imperdiet, bibendum nisi et, tempus eros. Praesent non iaculis metus. Ut ante orci, ornare a finibus ut, tincidunt quis metus. Donec pharetra, ipsum vel porta bibendum, dui ligula pulvinar urna, a porta ante ligula quis nunc. Praesent efficitur blandit dolor vestibulum vestibulum. Mauris et neque ut lectus commodo aliquet. Morbi ligula enim, accumsan ut ex sed, congue egestas libero. Sed accumsan malesuada erat, at tincidunt lacus aliquam at. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec eu est vel erat pretium elementum.</p>
+				  </div>
+				  <div class="overflow-auto border p2 mb2" style="height:85px;">
+				    <p class="mb1">.overflow-auto</p>
+				    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam euismod a justo ac laoreet. Fusce in semper sem. Proin porttitor pretium sodales. Duis laoreet quam imperdiet, bibendum nisi et, tempus eros. Praesent non iaculis metus. Ut ante orci, ornare a finibus ut, tincidunt quis metus. Donec pharetra, ipsum vel porta bibendum, dui ligula pulvinar urna, a porta ante ligula quis nunc. Praesent efficitur blandit dolor vestibulum vestibulum. Mauris et neque ut lectus commodo aliquet. Morbi ligula enim, accumsan ut ex sed, congue egestas libero. Sed accumsan malesuada erat, at tincidunt lacus aliquam at. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec eu est vel erat pretium elementum.</p>
+				  </div>
+				  <div class="overflow-scroll border p2 mb2" style="height:85px;">
+				    <p class="mb1">.overflow-scroll</p>
+				    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam euismod a justo ac laoreet. Fusce in semper sem. Proin porttitor pretium sodales. Duis laoreet quam imperdiet, bibendum nisi et, tempus eros. Praesent non iaculis metus. Ut ante orci, ornare a finibus ut, tincidunt quis metus. Donec pharetra, ipsum vel porta bibendum, dui ligula pulvinar urna, a porta ante ligula quis nunc. Praesent efficitur blandit dolor vestibulum vestibulum. Mauris et neque ut lectus commodo aliquet. Morbi ligula enim, accumsan ut ex sed, congue egestas libero. Sed accumsan malesuada erat, at tincidunt lacus aliquam at. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec eu  est vel erat pretium elementum.</p>
+				  </div>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">
+				<h3 class="index__main-content__sub-section__heading"><a name="width-and-height">Width and Height</a></h3>
+				<p>Use <code class="js-highlight">.fit</code> class for setting an element's max-width to 100%, as well as an <code class="js-highlight">.width-auto</code> to set an element's width to auto. Use <code class="js-highlight">.full-height</code> to set an element's height to 100%. Inline CSS is used here only for example purposes. Do not use in project.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;div class=&quot;fit border mb1&quot;&gt;.fit&lt;/div&gt;
+
+&lt;div class=&quot;width-auto border mb1&quot;&gt;.width-auto&lt;/div&gt;
+
+&lt;div style=&quot;height:85px;&quot; class=&quot;border p1&quot;&gt;
+  &lt;div class=&quot;full-height border&quot;&gt;.full-height&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <div class="fit border mb1">.fit</div>
+				  <div class="width-auto border mb1">.width-auto</div>
+				  <div style="height:85px;" class="border p1">
+				    <div class="full-height border">.full-height</div>
+				  </div>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="spacing-prefixes">Spacing Prefixes</a></h3>
+				<p>This shorthand prefix and spacing unit system can be combined to set an element's margin, padding and position.</p>
+				<table class="table__border">
+				    <tbody>
+				    <tr>
+				      <th>Prefixes</th>
+				      <th>Description</th>
+				    </tr>
+				    <tr>
+				      <td><code class="js-highlight">m</code></td>
+				      <td>Margin</td>
+				    </tr>
+				    <tr>
+				      <td><code class="js-highlight">p</code></td>
+				      <td>Padding</td>
+				    </tr>
+				    <tr>
+				      <td><code class="js-highlight">t</code></td>
+				      <td>Top</td>
+				    </tr>
+				    <tr>
+				      <td><code class="js-highlight">r</code></td>
+				      <td>Right</td>
+				    </tr>
+				    <tr>
+				      <td><code class="js-highlight">b</code></td>
+				      <td>Bottom</td>
+				    </tr>
+				    <tr>
+				      <td><code class="js-highlight">l</code></td>
+				      <td>Left</td>
+				    </tr>
+				    <tr>
+				      <td><code class="js-highlight">mx</code>, <code class="js-highlight">px</code></td>
+				      <td>x-axis</td>
+				    </tr>
+				    <tr>
+				      <td><code class="js-highlight">my</code>, <code class="js-highlight">py</code></td>
+				      <td>y-axis</td>
+				    </tr>
+				    <tr>
+				      <td><code class="js-highlight">z</code></td>
+				      <td>z-index</td>
+				    </tr>
+				    <tr>
+				      <td>0</td>
+				      <td>0rem</td>
+				    </tr>
+				    <tr>
+				      <td>1</td>
+				      <td>.5rem <span class="text-grey ml1">$space-1</span></td>
+				    </tr>
+				    <tr>
+				      <td>2</td>
+				      <td>1rem <span class="text-grey ml1">$space-2</span></td>
+				    </tr>
+				    <tr>
+				      <td>3</td>
+				      <td>1.5rem <span class="text-grey ml1">$space-3</span></td>
+				    </tr>
+				    <tr>
+				      <td>4</td>
+				      <td>2rem <span class="text-grey ml1">$space-4</span></td>
+				    </tr>
+				    <tr>
+				      <td>5</td>
+				      <td>3rem <span class="text-grey ml1">$space-5</span></td>
+				    </tr>
+				    <tr>
+				      <td>6</td>
+				      <td>4.5rem <span class="text-grey ml1">$space-6</span></td>
+				    </tr>
+				  </tbody>
+				</table>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="margin">Margin</a></h3>
+				<p>Margin can be set from 0-6 spacing units on any side or axis, as well as set to <code class="js-highlight">.mx-auto</code> for horizontal centering. In the example below, <code class="js-highlight">.mr0</code> through <code class="js-highlight">.mr6</code> are used to set margin-right of each element to the various spacing values.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;div class=&quot;inline-block border p1 mr0&quot;&gt;.mr0&lt;/div&gt;
+&lt;div class=&quot;inline-block border p1 mr1&quot;&gt;.mr1&lt;/div&gt;
+&lt;div class=&quot;inline-block border p1 mr2&quot;&gt;.mr2&lt;/div&gt;
+&lt;div class=&quot;inline-block border p1 mr3&quot;&gt;.mr3&lt;/div&gt;
+&lt;div class=&quot;inline-block border p1 mr4&quot;&gt;.mr4&lt;/div&gt;
+&lt;div class=&quot;inline-block border p1 mr5&quot;&gt;.mr5&lt;/div&gt;
+&lt;div class=&quot;inline-block border p1 mr6&quot;&gt;.mr6&lt;/div&gt;
+&lt;div class=&quot;col-6 border p1 mt2 mx-auto&quot;&gt;.mx-auto&lt;/div&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <div class="inline-block border p1 mr0">.mr0</div>
+				  <div class="inline-block border p1 mr1">.mr1</div>
+				  <div class="inline-block border p1 mr2">.mr2</div>
+				  <div class="inline-block border p1 mr3">.mr3</div>
+				  <div class="inline-block border p1 mr4">.mr4</div>
+				  <div class="inline-block border p1 mr5">.mr5</div>
+				  <div class="inline-block border p1 mr6">.mr6</div>
+				  <div class="col-6 border p1 mt2 mx-auto">.mx-auto</div>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="padding">Padding</a></h3>
+				<p>Padding can be set from 0-6 spacing units on any side or axis, in the example below, <code class="js-highlight">.p0</code> through <code class="js-highlight">.p6</code> are used to set each element's padding to the various spacing values.</p>
+			    <div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;div class=&quot;inline-block border p0&quot;&gt;.p0&lt;/div&gt;
+&lt;div class=&quot;inline-block border p1&quot;&gt;.p1&lt;/div&gt;
+&lt;div class=&quot;inline-block border p2&quot;&gt;.p2&lt;/div&gt;
+&lt;div class=&quot;inline-block border p3&quot;&gt;.p3&lt;/div&gt;
+&lt;div class=&quot;inline-block border p4&quot;&gt;.p4&lt;/div&gt;
+&lt;div class=&quot;inline-block border p5&quot;&gt;.p5&lt;/div&gt;
+&lt;div class=&quot;inline-block border p6&quot;&gt;.p6&lt;/div&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <div class="inline-block border p0">.p0</div>
+				  <div class="inline-block border p1">.p1</div>
+				  <div class="inline-block border p2">.p2</div>
+				  <div class="inline-block border p3">.p3</div>
+				  <div class="inline-block border p4">.p4</div>
+				  <div class="inline-block border p5">.p5</div>
+				  <div class="inline-block border p6">.p6</div>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="positioning">Positioning</a></h3>
+				<p>Developers can use specific classes for setting an element's position and hierarchy. For positioning, an element can be set to <code class="js-highlight">.relative</code>, <code class="js-highlight">.absolute</code>, <code class="js-highlight">.fixed</code> or <code class="js-highlight">.static</code>. Setting z-index and top, right, bottom, left positioning can be done by using the shorthand from the previous table.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;div class=&quot;border p2&quot;&gt;
+  &lt;div class=&quot;relative t2 l2 border&quot;&gt;.relative .t2 .l2&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;relative border p2&quot;&gt;
+  .relative
+  &lt;div class=&quot;absolute t0 l6 border&quot;&gt;.absolute .t0 .l6&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;relative p4&quot;&gt;
+  &lt;div class=&quot;absolute t1 l1 z1 border p1&quot;&gt;.absolute .t1 .l1 z1&lt;/div&gt;
+  &lt;div class=&quot;absolute t4 l4 z2 border p1 fill-white&quot;&gt;.absolute .t2 .l2 z2&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <div class="mb2">
+				    <div class="border p2">
+					  <div class="relative t2 l2 border">.relative .t2 .l2</div>
+				    </div>
+				  </div>
+				  <div class="mb2">
+				    <div class="relative border p2">
+					  .relative
+					  <div class="absolute t0 l6 border">.absolute .t0 .l6</div>
+				    </div>
+				  </div>
+				  <div class="relative p4">
+					<div class="absolute t1 l1 z1 border p1">.absolute .t1 .l1 z1</div>
+					<div class="absolute t4 l4 z2 border p1 fill-white">.absolute .t2 .l2 z2</div>
+				  </div>
+				</div>
+			</div>
+		</div>-->
+			
+		<!-- typography 
+		<div class="index__main-content__section">
+			<h2 class="index__main-content__section__header">Typography</h2>
+			<div class="index__main-content__sub-section">
+				<h3 class="index__main-content__sub-section__heading"><a name="headers">Headers and Sizing</a></h3>
+				<p>Header sizes are defined from h1 to h6. Additionally, there are utility classes ranging from <code class="js-highlight">text-1</code> to <code class="js-highlight">text-6</code> for sizing blocks of text. Headers and text sizing classes have no margins or padding by default.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;h1&gt;This is an example of a h1&lt;/h1&gt;
+&lt;p class=&quot;text-1&quot;&gt;This is an example of a h1&lt;/p&gt;
+&lt;h2&gt;This is an example of a h2&lt;/h2&gt;
+&lt;p class=&quot;text-2&quot;&gt;This is an example of a h2&lt;/p&gt;
+&lt;h3&gt;This is an example of a h3&lt;/h3&gt;
+&lt;p class=&quot;text-3&quot;&gt;This is an example of a h3&lt;/p&gt;
+&lt;h4&gt;This is an example of a h4&lt;/h4&gt;
+&lt;p class=&quot;text-4&quot;&gt;This is an example of a h4&lt;/p&gt;
+&lt;h5&gt;This is an example of a h5&lt;/h5&gt;
+&lt;p class=&quot;text-5&quot;&gt;This is an example of a h5&lt;/p&gt;
+&lt;h6&gt;This is an example of a h6&lt;/h6&gt;
+&lt;p class=&quot;text-6&quot;&gt;This is an example of a h6&lt;/p&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <p><code class="js-highlight">h1</code>, .<code class="js-highlight">text-1</code>
+       			  <span class="index__main-content__code__values"><strong>Pixels</strong> 30px / <strong>Line-Height</strong> 34px / <strong>Margin Bottom</strong> 40px</span></p>
+				  <h1>This is an example of a h1</h1>
+				  <p><code class="js-highlight">h2</code>, .<code class="js-highlight">text-2</code>
+       			  <span class="index__main-content__code__values">25px / 29px / 20px</span></p>
+				  <h2>This is an example of a h2</h2>
+				  <p><code class="js-highlight">h3</code>, .<code class="js-highlight">text-3</code>
+       			  <span class="index__main-content__code__values">20px / 24px / 20px</span></p>
+				  <h3>This is an example of a h3</h3>
+				  <p><code class="js-highlight">h4</code>, .<code class="js-highlight">text-4</code>
+       			  <span class="index__main-content__code__values">18px / 22px / 20px</span></p>
+				  <h4>This is an example of a h4</h4>
+				  <p><code class="js-highlight">h5</code>, .<code class="js-highlight">text-5</code>
+       			  <span class="index__main-content__code__values">16px / 20px / 20px</span></p>
+				  <h5>This is an example of a h5</h5>
+				  <p><code class="js-highlight">h6</code>, .<code class="js-highlight">text-6</code>
+       			  <span class="index__main-content__code__values">14px / 18px / 20px</span></p>
+				  <h6>This is an example of a h6</h6>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="paragraph">Paragraphs</a></h3>
+				<p>Paragraphs have a set font-size of 16px. They have a set margin-bottom apart from the last-child element which has 0px margin-bottom.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;p&gt;This is an example of a paragraph&lt;/p&gt;
+&lt;p&gt;This is an example of a paragraph&lt;/p&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <p><code class="js-highlight">h1</code>, .<code class="js-highlight">text-1</code>
+       			  <span class="index__main-content__code__values"><strong>Pixels</strong> 16px / <strong>Line-Height</strong> 34px / <strong>Margin Bottom</strong> 40px / 0px (last-child)</span></p>
+				  <p>This is an example of a paragraph</p>
+				   <p>This is an example of a paragraph</p>
+
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="emphasis">Emphasis</a></h3>
+				<p>Use the following html tags and utility classes to add emphasis to blocks of text.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				   <pre><code class="html">&lt;p class=&quot;bold&quot;&gt;&lt;span class=&quot;regular&quot;&gt;Lorem ipsum dolor&lt;/span&gt;sit amet, consectetur adipiscing elit&lt;/p&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <p><code class="js-highlight">.regular</code></p>
+				  <p class="bold"><span class="regular">Lorem ipsum dolor</span> sit amet, consectetur adipiscing elit</p>
+				</div>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				   <pre><code class="html">&lt;strong&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit&lt;/strong&gt;
+&lt;p class=&quot;bold&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit&lt;/p&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <p><code class="js-highlight">strong</code>, <code class="js-highlight">.bold</code></p>
+				  <p class="bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+				</div>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				   <pre><code class="html">&lt;em&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit&lt;/em&gt;
+&lt;p class=&quot;italic&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit&lt;/p&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <p><code class="js-highlight">em</code>, <code class="js-highlight">.italic</code></p>
+				  <p class="italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+				</div>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				   <pre><code class="html">&lt;p class=&quot;caps&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit&lt;/p&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <p><code class="js-highlight">.caps</code></p>
+				  <p class="caps">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="overflow-typography">Overflow</a></h3>
+				<p>Use the following utility classes to prevent blocks of text from wrapping or to truncate them (requires setting a width).</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p> 
+				  <pre><code class="html">&lt;p class=&quot;nowrap&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam euismod a justo ac laoreet. Fusce in semper sem. Proin porttitor pretium sodales. Duis laoreet quam imperdiet, bibendum nisi et, tempus eros. Praesent non iaculis metus. Ut ante orci, ornare a finibus ut, tincidunt quis metus. Donec pharetra, ipsum vel porta bibendum, dui ligula pulvinar urna, a porta ante ligula quis nunc.&lt;/p&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <p><code class="js-highlight">.nowrap</code></p>
+				  <p class="nowrap overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam euismod a justo ac laoreet. Fusce in semper sem. Proin porttitor pretium sodales. Duis laoreet quam imperdiet, bibendum nisi et, tempus eros. Praesent non iaculis metus. Ut ante orci, ornare a finibus ut, tincidunt quis metus. Donec pharetra, ipsum vel porta bibendum, dui ligula pulvinar urna, a porta ante ligula quis nunc.</p>
+				</div>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;p class=&quot;truncate&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam euismod a justo ac laoreet. Fusce in semper sem. Proin porttitor pretium sodales. Duis laoreet quam imperdiet, bibendum nisi et, tempus eros. Praesent non iaculis metus. Ut ante orci, ornare a finibus ut, tincidunt quis metus. Donec pharetra, ipsum vel porta bibendum, dui ligula pulvinar urna, a porta ante ligula quis nunc.&lt;/p&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <p><code class="js-highlight">.truncate</code></p>
+				  <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam euismod a justo ac laoreet. Fusce in semper sem. Proin porttitor pretium sodales. Duis laoreet quam imperdiet, bibendum nisi et, tempus eros. Praesent non iaculis metus. Ut ante orci, ornare a finibus ut, tincidunt quis metus. Donec pharetra, ipsum vel porta bibendum, dui ligula pulvinar urna, a porta ante ligula quis nunc.</p>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="alignment">Alignment</a></h3>
+				<p>Use these utility classes to align blocks of text.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;p class=&quot;text-left&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit&lt;/p&gt;
+&lt;p class=&quot;text-center&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit&lt;/p&gt;
+&lt;p class=&quot;text-right&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit&lt;/p&gt;
+&lt;p class=&quot;text-justify&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit&lt;/p&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <p><code class="js-highlight">.text-left</code></p>
+				  <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+				  <p><code class="js-highlight">.text-cente</code></p>
+				  <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+				  <p><code class="js-highlight">.text-right</code></p>
+				  <p class="text-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+				  <p><code class="js-highlight">.text-justify</code></p>
+				  <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="lists">Lists</a></h3>
+				<p>Ordered and unordered lists require no classes by default. To remove all styling from either list, use the <code class="js-highlight">.list-unstyled</code> class.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;ol&gt;
+&lt;li&gt;John&lt;/li&gt;
+&lt;li&gt;Paul&lt;/li&gt;
+&lt;li&gt;George&lt;/li&gt;
+&lt;li&gt;Ringo&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;John&lt;/li&gt;
+&lt;li&gt;Paul&lt;/li&gt;
+&lt;li&gt;George&lt;/li&gt;
+&lt;li&gt;Ringo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class=&quot;list-unstyled&quot;&gt;
+&lt;li&gt;John&lt;/li&gt;
+&lt;li&gt;Paul&lt;/li&gt;
+&lt;li&gt;George&lt;/li&gt;
+&lt;li&gt;Ringo&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <p><code class="js-highlight">ol</code></p>
+				  <ol>
+				    <li>John</li>
+				    <li>Paul</li>
+				    <li>George</li>
+				    <li>Ringo</li>
+				  </ol>
+				  <p><code class="js-highlight">ul</code></p>
+				  <ul>
+				    <li>John</li>
+				    <li>Paul</li>
+				    <li>George</li>
+				    <li>Ringo</li>
+				  </ul>
+				  <p><code class="js-highlight">.list-unstyled</code></p>
+				  <ul class="list-unstyled">
+				    <li>John</li>
+				    <li>Paul</li>
+				    <li>George</li>
+				    <li>Ringo</li>
+				  </ul>
+				</div>
+			</div>
+		</div>-->
+			
+		<!-- borders
+		<div class="index__main-content__section">
+			<h2 class="index__main-content__section__header">Borders</h2>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="borders">Borders</a></h3>
+				<p>Borders are set up semi-transparent so they work with nearly any fill they're applied on top of. Use <code class="js-highlight">.border</code>, <code class="js-highlight">.border-top</code>, <code class="js-highlight">.border-right</code>, <code class="js-highlight">.border-bottom</code> and <code class="js-highlight">.border-left</code> to adjust outlines on elements.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;div class=&quot;border p1 m1&quot;&gt;.border&lt;/div&gt;
+&lt;div class=&quot;border-top p1 m1&quot;&gt;.border-top&lt;/div&gt;
+&lt;div class=&quot;border-right p1 m1&quot;&gt;.border-right&lt;/div&gt;
+&lt;div class=&quot;border-bottom p1 m1&quot;&gt;.border-bottom&lt;/div&gt;
+&lt;div class=&quot;border-left p1 m1&quot;&gt;.border-left&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				    <div class="border p1 m1">.border</div>
+				    <div class="border-top p1 m1">.border-top</div>
+				    <div class="border-right p1 m1">.border-right</div>
+				    <div class="border-bottom p1 m1">.border-bottom</div>
+				    <div class="border-left p1 m1">.border-left</div>
+				  </div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="lighter-borders">Lighter Borders</a></h3>
+				<p>Adding <code class="js-highlight">--lighter</code> to the border classes above results in a slightly more transparent border.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;div class=&quot;border--lighter p1 m1&quot;&gt;.border--lighter&lt;/div&gt;
+&lt;div class=&quot;border-top--lighter p1 m1&quot;&gt;.border-top--lighter&lt;/div&gt;
+&lt;div class=&quot;border-right--lighter p1 m1&quot;&gt;.border-right--lighter&lt;/div&gt;
+&lt;div class=&quot;border-bottom--lighter p1 m1&quot;&gt;.border-bottom--lighter&lt;/div&gt;
+&lt;div class=&quot;border-left--lighter p1 m1&quot;&gt;.border-left--lighter&lt;/div&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <div class="border--lighter p1 m1">.border--lighter</div>
+				  <div class="border-top--lighter p1 m1">.border-top--lighter</div>
+				  <div class="border-right--lighter p1 m1">.border-right--lighter</div>
+				  <div class="border-bottom--lighter p1 m1">.border-bottom--lighter</div>
+				  <div class="border-left--lighter p1 m1">.border-left--lighter</div>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="removing-borders">Removing Borders</a></h3>
+				<p>When a border needs to be removed (at a breakpoint, for instance), use <code class="js-highlight">.border-none</code> classes.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;div class=&quot;border border-none p1 m1&quot;&gt;.border-none&lt;/div&gt;
+&lt;div class=&quot;border border-top-none p1 m1&quot;&gt;.border-top-none&lt;/div&gt;
+&lt;div class=&quot;border border-right-none p1 m1&quot;&gt;.border-right-none&lt;/div&gt;
+&lt;div class=&quot;border border-bottom-none p1 m1&quot;&gt;.border-bottom-none&lt;/div&gt;
+&lt;div class=&quot;border border-left-none p1 m1&quot;&gt;.border-left-none&lt;/div&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <div class="border border-none p1 m1">.border-none</div>
+				  <div class="border border-top-none p1 m1">.border-top-none</div>
+				  <div class="border border-right-none p1 m1">.border-right-none</div>
+				  <div class="border border-bottom-none p1 m1">.border-bottom-none</div>
+				  <div class="border border-left-none p1 m1">.border-left-none</div>
+				</div>
+			</div>			
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="rounded-corners">Rounded Corners</a></h3>
+				<p>Round off corners using <code class="js-highlight">.rounded</code>, <code class="js-highlight">.rounded-top</code> and <code class="js-highlight">.rounded-bottom</code>.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;div class=&quot;border rounded p1 m1&quot;&gt;.rounded&lt;/div&gt;
+&lt;div class=&quot;border rounded-top p1 m1&quot;&gt;.rounded-top&lt;/div&gt;
+&lt;div class=&quot;border rounded-bottom p1 m1&quot;&gt;.rounded-bottom&lt;/div&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <div class="border rounded p1 m1">.rounded</div>
+				  <div class="border rounded-top p1 m1">.rounded-top</div>
+				  <div class="border rounded-bottom p1 m1">.rounded-bottom</div>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="circles">Circles</a></h3>
+				<p>Create a circle out of an element with the same width and height using the <code class="js-highlight">.circle</code> class. You can then give the element a set height and width. For example purposes this is done via inline css. In projects please create a class.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;div class=&quot;circle border&quot;&gt;&lt;/div&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <div class="circle border" style="width: 100px; height: 100px"></div>
+				</div>
+			</div>
+		</div> -->
+			
+		<!-- buttons
+		<div class="index__main-content__section">
+			<h2 class="index__main-content__section__header">Buttons</h2>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="primary-buttons">Primary Buttons</a></h3>
+				<p>This button type is used for primary links and page actions. It can be used with either <code class="js-highlight">a</code> or <code class="js-highlight">button</code> tags.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;a class=&quot;button button--primary&quot; href=&quot;&quot;&gt;Link&lt;/a&gt;
+&lt;button class=&quot;button button--primary&quot;&gt;Button&lt;/button&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <p><code class="js-highlight">.button--primary</code></p>
+				  <a class="button button--primary" href="">Link</a>
+				  <button class="button button--primary">Button</button>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="secondary-buttons">Secondary Buttons</a></h3>
+				<p>This button type is used for secondary links and page actions. It can be used with either <code class="js-highlight">a</code> or <code class="js-highlight">button</code> tags.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;a class=&quot;button button--secondary&quot; href=&quot;&quot;&gt;Link&lt;/a&gt;
+&lt;button class=&quot;button button--secondary&quot;&gt;Button&lt;/button&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <p><code class="js-highlight">.button--secondary</code></p>
+				  <a class="button button--secondary" href="">Link</a>
+				  <button class="button button--secondary">Button</button>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="disabled-buttons">Disabled Buttons</a></h3>
+				<p>This button type is used for inactive links and page actions.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;a class=&quot;button--disabled button--primary&quot; href=&quot;&quot;&gt;Link&lt;/a&gt;
+&lt;button class=&quot;button--disabled button--primary&quot;&gt;Button&lt;/button&gt;
+&lt;a class=&quot;button--disabled button--secondary&quot; href=&quot;&quot;&gt;Link&lt;/a&gt;
+&lt;button class=&quot;button--disabled button--secondary&quot;&gt;Button&lt;/button&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <p><code class="js-highlight">.button--disabled</code></p>
+				  <a class="button--disabled button--primary" href="">Link</a>
+				  <button class="button--disabled button--primary">Button</button>
+				  <a class="button--disabled button--secondary" href="">Link</a>
+				  <button class="button--disabled button--secondary">Button</button>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">
+				<h3 class="index__main-content__sub-section__heading"><a name="small-buttons">Small Buttons</a></h3>
+				<p>Use the <code class="js-highlight">.button--small</code> class for smaller versions of all above button types.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;a class=&quot;button--small button--primary&quot; href=&quot;&quot;&gt;Link&lt;/a&gt;
+&lt;button class=&quot;button--small button--primary&quot;&gt;Button&lt;/button&gt;
+&lt;a class=&quot;button--small button--secondary&quot; href=&quot;&quot;&gt;Link&lt;/a&gt;
+&lt;button class=&quot;button--small button--secondary&quot;&gt;Button&lt;/button&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <p><code class="js-highlight">.button--small</code></p>
+				  <a class="button--small button--primary" href="">Link</a>
+				  <button class="button--small button--primary">Button</button>
+				  <a class="button--small button--secondary" href="">Link</a>
+				  <button class="button--small button--secondary">Button</button>
+				</div>
+			</div>		          
+		</div> -->
+			
+		<!-- forms 
+		<div class="index__main-content__section">
+			<h2 class="index__main-content__section__header">Forms</h2>
+      <p>Form elements must always be paired with a <code class="js-highlight">label</code> for accessability. There also must be matching <code class="js-highlight">for</code> and <code class="js-highlight">id</code> values to associate the <code class="js-highlight">label</code> with the form element</label>. The form element must also have an appropriate <code class="js-highlight">name</code> attribute. Placeholder text is used for additional context when necessary.</p>
+			<div class="index__main-content__sub-section">
+				<h3 class="index__main-content__sub-section__heading"><a name="form-labels">Form Labels</a></h3>
+				<p>Use the <code class="js-highlight">.form-label</code> class to get default margins, layout and styling for form labels. Additionally, use the <code class="js-highlight">.form-label--required</code> class around an asterisk to declare a field required. If a field needs to be marked as optional, wrap "(optional)" in <code class="js-highlight">.form-label--optional</code>.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;form&gt;
+  &lt;label class=&quot;form-label&quot;&gt;Add your website&lt;/label&gt;
+  &lt;label class=&quot;form-label&quot;&gt;Add your website &lt;span class=&quot;form-label--required&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+  &lt;label class=&quot;form-label&quot;&gt;What is your phone number? &lt;span class=&quot;form-label--optional&quot;&gt;(optional)&lt;/span&gt;&lt;/label&gt;
+&lt;/form&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <form>
+            <label class="form-label">Add your website</label>
+            <label class="form-label">Add your website <span class="form-label--required">*</span></label>
+            <label class="form-label">What is your phone number? <span class="form-label--optional">(optional)</span></label>
+          </form>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="text-inputs">Text Inputs</a></h3>
+				<p>Use the <code class="js-highlight">.text-input</code> class to get default styling for text inputs. Text inputs are always paired with a <code class="js-highlight">label</code> to give users context. Placeholder text is used for additional context when necessary.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;form&gt;
+  &lt;label for=&quot;name&quot; class=&quot;form-label&quot;&gt;Whats your name&lt;/label&gt;
+  &lt;input id=&quot;name&quot; type=&quot;text&quot; name=&quot;textfield&quot; class=&quot;text-input&quot; placeholder=&quot;Placeholder Text&quot;&gt;
+&lt;/form&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <form>
+            <label for="name" class="form-label">Whats your name</label>
+            <input id="name" type="text" name="textfield" class="text-input" placeholder="Placeholder Text">
+          </form>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">
+				<h3 class="index__main-content__sub-section__heading"><a name="helper-text">Helper Text</a></h3>
+				<p>When necessary, place additional helper text beneath inputs in a div with a <code class="js-highlight">.form-helper</code> class.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;form&gt;
+  &lt;label for=&quot;firstname&quot; class=&quot;form-label&quot;&gt;Whats your first name&lt;/label&gt;
+  &lt;input id=&quot;firstname&quot; type=&quot;text&quot; name=&quot;firstnametext&quot; class=&quot;text-input&quot; placeholder=&quot;Placeholder Text&quot;&gt;
+  &lt;div class=&quot;form-helper&quot;&gt;You don't need to include http://&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+          <form>
+            <label for="firstname" class="form-label">Whats your first name</label>
+            <input id="firstname" type="text" name="firstnametext" class="text-input" placeholder="Placeholder Text">
+            <div class="form-helper">You don't need to include http://</div>
+          </form>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="textareas">Textareas</a></h3>
+				<p>Use the <code class="js-highlight">.textarea</code> class to get default styling for textareas.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;form&gt;
+  &lt;label for=&quot;address&quot; class=&quot;form-label&quot;&gt;Whats your address&lt;/label&gt;
+  &lt;textarea id=&quot;address&quot; name=&quot;addresstext&quot; class=&quot;textarea&quot; placeholder=&quot;Placeholder Text&quot;&gt;&lt;/textarea&gt;
+&lt;/form&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+          <form>
+            <label for="address" class="form-label">Whats your address</label>
+            <textarea id="address" name="addresstext" class="textarea" placeholder="Placeholder Text"></textarea>
+          </form>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="select-fields">Select Fields</a></h3>
+				<p>Use the <code class="js-highlight">.select</code> class to get default styling for select fields. Select Fields must always be paired with a <code class="js-highlight">label</code> for accessability.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;form&gt;
+  &lt;label for=&quot;statement&quot; class=&quot;form-label&quot;&gt;Add a Statement&lt;/label&gt;
+  &lt;select id=&quot;statement&quot; name=&quot;selectStatement&quot; class=&quot;select&quot;&gt;
+    &lt;option value=&quot;choose&quot;&gt;Choose your Option&lt;/option&gt;
+    &lt;option value=&quot;amazing&quot;&gt;Option 1&lt;/option&gt;
+    &lt;option value=&quot;boring&quot;&gt;Option 2&lt;/option&gt;
+    &lt;option value=&quot;fun&quot;&gt;Option 3&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/form&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+          <form>
+            <label for="statement" class="form-label">Add a Statement</label>
+            <select id="statement" name="selectStatement" class="select">
+              <option value="choose">Choose your Option</option>
+              <option value="amazing">Option 1</option>
+              <option value="boring">Option 2</option>
+              <option value="fun">Option 3</option>
+            </select>
+          </form>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="radio-buttons">Radio Buttons</a></h3>
+				<p>Use the <code class="js-highlight">.radio</code> class alongside a <code class="js-highlight">label</code> to get default styling for radio inputs. Radio inputs must be contained in a <code class="js-highlight">fieldset</code> with the class <code class="js-highlight">.fieldset__radio</code> and must have a relative <code class="js-highlight">legend</code>.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;form&gt;
+  &lt;fieldset class=&quot;fieldset__radio&quot;&gt;
+    &lt;legend&gt;Radio Button Legend:&lt;/legend&gt;
+    &lt;input type=&quot;radio&quot; class=&quot;radio&quot; id=&quot;option_1&quot; value=&quot;option_1&quot; name=&quot;options&quot; checked=&quot;checked&quot;&gt;
+    &lt;label for=&quot;option_1&quot;&gt;Option 1&lt;/label&gt;
+    &lt;input type=&quot;radio&quot; class=&quot;radio&quot; id=&quot;option_2&quot; value=&quot;option_2&quot; name=&quot;options&quot;&gt;
+    &lt;label for=&quot;option_2&quot;&gt;Option 2&lt;/label&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+          <form>
+            <fieldset class="fieldset__radio">
+              <legend>Radio Button Legend:</legend>
+              <input type="radio" class="radio" id="option_1" value="option_1" name="options" checked="checked">
+              <label for="option_1">Option 1</label>
+              <input type="radio" class="radio" id="option_2" value="option_2" name="options">
+              <label for="option_2">Option 2</label>
+            </fieldset>
+          </form>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="checkboxes">Checkboxes</a></h3>
+				<p>Use the <code class="js-highlight">.checkbox</code> class alongside a <code class="js-highlight">label</code> to get default styling for checkbox inputs. Checkbox inputs must be contained in a <code class="js-highlight">fieldset</code> with the class <code class="js-highlight">.fieldset__checkbox</code> and must have a relative <code class="js-highlight">legend</code></p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;form&gt;
+  &lt;fieldset class=&quot;fieldset__checkbox&quot;&gt;
+    &lt;legend&gt;Checkbox Legend:&lt;/legend&gt; 
+    &lt;input type=&quot;checkbox&quot; class=&quot;checkbox&quot; id=&quot;check_1&quot; value=&quot;check_1&quot; name=&quot;checkboxes&quot; checked=&quot;checked&quot;&gt;
+    &lt;label for=&quot;check_1&quot;&gt;Option 1&lt;/label&gt;
+    &lt;input type=&quot;checkbox&quot; class=&quot;checkbox&quot; id=&quot;check_2&quot; value=&quot;check_2&quot; name=&quot;checkboxes&quot;&gt;
+    &lt;label for=&quot;check_2&quot;&gt;Option 2&lt;/label&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+          <form>
+            <fieldset class="fieldset__checkbox">
+              <legend>Checkbox Legend:</legend> 
+              <input type="checkbox" class="checkbox" id="check_1" value="check_1" name="checkboxes" checked="checked">
+              <label for="check_1">Option 1</label>
+              <input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+              <label for="check_2">Option 2</label>
+            </fieldset>
+          </form>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="small-form-labels">Small Form Labels</a></h3>
+				<p>Append the <code class="js-highlight">.form-label--small</code> class to get a smaller version of form labels.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;form&gt;
+  &lt;label class=&quot;form-label form-label--small&quot;&gt;Add your website&lt;/label&gt;
+&lt;/form&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+          <form>
+            <label class="form-label form-label--small">Add your website</label>
+          </form>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="small-text-inputs">Small Text Inputs</a></h3>
+				<p>Append the <code class="js-highlight">.text-input--small</code> class to get a smaller version of text inputs.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;form&gt;
+  &lt;label for=&quot;username&quot; class=&quot;form-label form-label--small&quot;&gt;Choose a username&lt;/label&gt;
+  &lt;input id=&quot;username&quot; name=&quot;usernametext&quot; type=&quot;text&quot; class=&quot;text-input text-input--small&quot; placeholder=&quot;Placeholder Text&quot;&gt;
+&lt;/form&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+					<form>
+					  <label for="username" class="form-label form-label--small">Choose a username</label>
+					  <input id="username" name="usernametext" type="text" class="text-input text-input--small" placeholder="Placeholder Text">
+					</form>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="small-textareas">Small Textareas</a></h3>
+				<p>Append the <code class="js-highlight">.textarea--small</code> class to get a smaller version of textareas.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;form&gt;
+  &lt;label for=&quot;comment&quot; class=&quot;form-label form-label--small&quot;&gt;Add a Comment&lt;/label&gt;
+  &lt;textarea id=&quot;comment&quot; name=&quot;commenttext&quot; class=&quot;textarea textarea--small&quot;&gt;&lt;/textarea&gt;
+&lt;/form&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+          <form>
+            <label for="comment" class="form-label form-label--small">Add a Comment</label>
+            <textarea id="comment" name="commenttext" class="textarea textarea--small"></textarea>
+          </form>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="small-select-fields">Small Select Fields</a></h3>
+				<p>Use the <code class="js-highlight">.select--small</code> class to get the smaller version of select field.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;form&gt;
+  &lt;label for=&quot;option&quot; class=&quot;form-label&quot;&gt;Choose an Option&lt;/label&gt;
+  &lt;select id=&quot;option&quot; name=&quot;optiontext&quot; class=&quot;select select--small&quot;&gt;
+    &lt;option value=&quot;choose&quot;&gt;Choose your option&lt;/option&gt;
+    &lt;option value=&quot;amazing&quot;&gt;Option 1&lt;/option&gt;
+    &lt;option value=&quot;boring&quot;&gt;Option 2&lt;/option&gt;
+    &lt;option value=&quot;fun&quot;&gt;Option 3&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/form&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+          <form>
+            <label for="option" class="form-label">Choose an Option</label>
+            <select id="option" name="optiontext" class="select select--small">
+              <option value="choose">Choose your option</option>
+              <option value="amazing">Option 1</option>
+              <option value="boring">Option 2</option>
+              <option value="fun">Option 3</option>
+            </select>
+          </form>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="form-warnings">Form Warnings</a></h3>
+				<p>Wrap each field in a div and add a <code class="js-highlight">.form-element--warning</code> class to change the child label and form field styling. Additionally, add a div below the input with a <code class="js-highlight">.form-feedback</code> class to inform the user what needs to be adjusted.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;form&gt;
+  &lt;div class=&quot;form-element--warning&quot;&gt;
+    &lt;label for=&quot;namewarning&quot; class=&quot;form-label&quot;&gt;Your name&lt;/label&gt;
+    &lt;input id=&quot;namewarning&quot; name=&quot;namewarningtext&quot; type=&quot;text&quot; class=&quot;text-input&quot;&gt;
+    &lt;div class=&quot;form-feedback&quot;&gt;Caps lock is on!&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+          <form>
+            <div class="form-element--warning">
+              <label for="namewarning" class="form-label">Your name</label>
+              <input id="namewarning" name="namewarningtext" type="text" class="text-input">
+              <div class="form-feedback">Caps lock is on!</div>
+            </div>
+          </form>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="form-errors">Form Errors</a></h3>
+				<p>Wrap each field in a form and add a <code class="js-highlight">.form-element--warning</code> class to change the child label and form field styling. Additionally, add a div below the input with a <code class="js-highlight">.form-feedback</code> class to inform the user what needs to be adjusted.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;form&gt;
+  &lt;div class=&quot;form-element--error&quot;&gt;
+    &lt;label for=&quot;nameerror&quot; class=&quot;form-label&quot;&gt;Your name&lt;/label&gt;
+    &lt;input id=&quot;nameerror&quot; name=&quot;nameerrortext&quot; type=&quot;text&quot; class=&quot;text-input&quot;&gt;
+    &lt;div class=&quot;form-feedback&quot;&gt;Your name can't be Enda?&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+					<form>
+					  <div class="form-element--error">
+					    <label for="nameerror" class="form-label">Your name</label>
+					    <input id="nameerror" name="nameerrortext" type="text" class="text-input">
+					    <div class="form-feedback">Your name can't be Enda?</div>
+					  </div>
+					</form>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="form-success">Form Success</a></h3>
+				<p>Wrap each field in a div and add a <code class="js-highlight">.form-element--success</code> class to change the child label and form field styling. Additionally, add a div below the input with a <code class="js-highlight">.form-feedback</code> class to inform the user what needs to be adjusted.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;form&gt;
+  &lt;div class=&quot;form-element--success&quot;&gt;
+    &lt;label for=&quot;namesuccess&quot; class=&quot;form-label&quot;&gt;Your name&lt;/label&gt;
+    &lt;input id=&quot;namesuccess&quot; name=&quot;namesuccesstext&quot; type=&quot;text&quot; class=&quot;text-input&quot;&gt;
+    &lt;div class=&quot;form-feedback&quot;&gt;Looks good!&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+          <form>
+            <div class="form-element--success">
+              <label for="namesuccess" class="form-label">Your name</label>
+              <input id="namesuccess" name="namesuccesstext" type="text" class="text-input">
+              <div class="form-feedback">Looks good!</div>
+            </div>
+          </form>
+				</div>
+			</div>
+		</div>-->
+			
+		<!-- tables 
+		<div class="index__main-content__section">
+			<h2 class="index__main-content__section__header">Tables</h2>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="default-table">Default Table</a></h3>
+				<p>Default <code class="js-highlight">table</code> styling doesn't require any utility classes. Column widths can be added on a case by case basis. Width is set to 100% of the container element. Use <code class="js-highlight">scope</code> and <code class="js-highlight">caption</code> tags as per <a href="http://webaim.org/techniques/tables/">accessibility guidelines</a></p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;table&gt;
+&lt;caption&gt;Table Caption&lt;/caption&gt;
+&lt;tr&gt;
+&lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;
+&lt;th scope=&quot;col&quot;&gt;Age&lt;/th&gt;
+&lt;th scope=&quot;col&quot;&gt;Birthday&lt;/th&gt; 
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th scope=&quot;row&quot;&gt;Jackie&lt;/th&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;April 5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th scope=&quot;row&quot;&gt;Beth&lt;/th&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;January 14&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <table>
+				    <caption>Table Caption</caption>
+				    <tr>
+				      <th scope="col">Name</th>
+				      <th scope="col">Age</th>
+				      <th scope="col">Birthday</th>
+				    </tr>
+				    <tr>
+				      <th scope="row">Jackie</th>
+				      <td>5</td>
+				      <td>April 5</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">Beth</th>
+				      <td>8</td>
+				      <td>January 14</td>
+				    </tr>
+				  </table>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="bordered-table">Bordered Table</a></h3>
+				<p>Use the <code class="js-highlight">.table-border</code> class to automatically add borders to your table and all its rows.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;table class=&quot;table__border&quot;&gt;
+&lt;caption&gt;Table Caption&lt;/caption&gt;
+&lt;tr&gt;
+&lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;
+&lt;th scope=&quot;col&quot;&gt;Age&lt;/th&gt;
+&lt;th scope=&quot;col&quot;&gt;Birthday&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th scope=&quot;row&quot;&gt;Jackie&lt;/th&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;April 5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th scope=&quot;row&quot;&gt;Beth&lt;/th&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;January 14&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <table class="table__border">
+				    <caption>Table Caption</caption>
+				    <tr>
+				      <th scope="col">Name</th>
+				      <th scope="col">Age</th>
+				      <th scope="col">Birthday</th>
+				    </tr>
+				    <tr>
+				      <th scope="row">Jackie</th>
+				      <td>5</td>
+				      <td>April 5</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">Beth</th>
+				      <td>8</td>
+				      <td>January 14</td>
+				    </tr>
+				  </table>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="scroll-table">Scroll Table</a></h3>
+				<p>Use the container with class <code class="js-highlight">.table__scroll__container</code> and add the class <code class="js-highlight">.table__scroll</code> to the table element to make a table auto scoll once it reaches a min width.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;div class=&quot;table__scroll__container&quot;&gt;
+&lt;table class=&quot;table__scroll table__border&quot;&gt;
+&lt;caption&gt;Table Caption&lt;/caption&gt;
+&lt;tr&gt;
+&lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;
+&lt;th scope=&quot;col&quot;&gt;Age&lt;/th&gt;
+&lt;th scope=&quot;col&quot;&gt;Birthday&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th scope=&quot;row&quot;&gt;Jackie&lt;/th&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;April 5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th scope=&quot;row&quot;&gt;Beth&lt;/th&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;January 14&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <div class="table__scroll__container">
+<table class="table__scroll table__border">
+<caption>Table Caption</caption>
+<tr>
+<th scope="col">Name</th>
+<th scope="col">Age</th>
+<th scope="col">Birthday</th>
+</tr>
+<tr>
+<th scope="row">Jackie</th>
+<td>5</td>
+<td>April 5</td>
+</tr>
+<tr>
+<th scope="row">Beth</th>
+<td>8</td>
+<td>January 14</td>
+</tr>
+</table>
+</div>
+				</div>
+			</div>
+			<div class="index__main-content__sub-section">				
+				<h3 class="index__main-content__sub-section__heading"><a name="faux-table-layout">Faux Table Layout</a></h3>
+				<p>To give content the layout properties of a table without using the table element, use the <code class="js-highlight">.table</code>, <code class="js-highlight">.th</code>, <code class="js-highlight">.tr</code> and <code class="js-highlight">.td</code> classes.</p>
+				<div class="index__main-content__code">
+				  <p class="index__main-content__code__title">HTML</p>
+				  <pre><code class="html">&lt;div class=&quot;table&quot;&gt;
+&lt;div class=&quot;td&quot;&gt;Lines of different lengths&lt;/div&gt;
+&lt;div class=&quot;td&quot;&gt;Will automatically expand their inner divs to be as tall as each other.&lt;/div&gt;
+&lt;div class=&quot;td&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam euismod a justo ac laoreet. Fusce in semper sem.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				  <p class="index__main-content__code__title">Rendered HTML</p>
+				  <div class="table">
+<div class="td">Lines of different lengths</div>
+<div class="td">Will automatically expand their inner divs to be as tall as each other.</div>
+<div class="td">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam euismod a justo ac laoreet. Fusce in semper sem.</div>
+</div>
+				</div>
+			</div>
+		</div>-->
+			
+    
+  <!-- end of main content -->
+
+  </div>
+<div>
+
+
+<!--Code Highlighting--> 
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script> 
+<script>hljs.initHighlightingOnLoad();</script> 
+
+<!--Show/Hide Nav on Mobile and Flip Caret--> 
+<script type="text/javascript">
+    
+	$(document).ready(function(){
+	  
+	  //mobile menu
+	  $('.index__nav__header--mobile').on('click', function(){
+	      	$('.index__nav').toggleClass('js-nav--show', 100000 );	      	
+			$('.index__nav__header__caret__up, .index__nav__header__caret__down').toggle();
+	  });
+
+	  //navigation subitems 
+	  $('.js-show-nav-sublist').click(function(e) {
+	  		$('.index__nav__items__sublist').hide('slow');
+			e.preventDefault();
+			var myTarget = $(this).next('.index__nav__items__sublist');
+			var myTargetParent = $(this);
+			$(myTarget).show('slow');
+	  });
+
+	});
+
+</script>
+
+</body>
+</html>

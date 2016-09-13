@@ -1,0 +1,214 @@
+/*
+===============================================================================
+  modeuls - module 1 examples
+===============================================================================
+*/
+
+
+.m26-prog-main-masthead {
+	
+		.rte-header {
+			min-height: 35px;
+		}
+		
+		.rte-header nav {
+			top: inherit;
+			min-height:	35px;
+			overflow: inherit;
+		}
+	
+		 .rte-header nav .nav-level-one {
+		   display: block;
+		   margin: 0;
+		   height: auto;
+		  }
+		  
+		  .rte-header nav .nav-level-one li {
+			border-right: 1px solid $fill-white;
+			display: inline-block;
+			width: auto;
+		}
+		
+		.rte-header nav .nav-level-one li a {
+			border-bottom: none;
+			height: 36px;
+			line-height: 34px;
+			display: inline;
+		}
+		
+		.rte-header nav .nav-level-two li {
+			border-right: none;
+			border-bottom: none;
+			display: block;
+		}
+		
+		.rte-header nav .nav-level-two li a {
+			border-bottom: none;
+		}
+		  
+		  .rte-header nav .nav-level-two {
+			position: absolute;
+			top: 26px;
+			z-index: 1;
+			left: 180px;
+		  }
+		  
+		.rte-header nav .nav-level-two li {
+			width: 16.666666%;
+		}
+			
+		.rte-header nav .nav-level-two li:nth-child(3n+1) {
+			clear: none;
+		}
+		
+		.find-show-nav .find-show-nav--sub {
+			height: auto;
+		}
+		
+		.rte-header nav .nav-level-one li .more-menu-trigger, .rte-header nav .nav-level-two li .more-menu-trigger, .rte-header nav .nav-level-one li .more-menu-trigger, .rte-header nav .nav-level-two li .find-show-nav--sub-expand {
+		  background: none; 
+		 }
+		 
+		.rte-header nav .nav-level-one li .more-selected, .rte-header nav .nav-level-two li .more-selected {
+		  background: none;
+		  }
+		  
+		.rte-header nav .nav-level-two li a:hover {
+			background: #3C7C9C;
+		}
+		
+		.rte-header nav .more-menu-visible {
+			overflow:inherit;
+		}
+		
+		.rte-header nav .more-menu-visible, .rte-header nav .more-menu-visible li a:hover  {
+			padding: 0 1.45em !important;
+		}
+		
+		.prog-masthead-wrapper {
+			position: relative;
+		}
+		
+		.prog-masthead-overlay {
+			/*display: none;*/
+			
+		}
+		
+		.prog-masthead-ratio_img {
+		  width: 100%;
+		  padding-bottom: 56.25%;
+		  background-repeat:no-repeat; 
+		  background-size:100%;
+	  }
+
+	}
+#programme-page-dd{
+	
+	.nav-level-two{
+		position: inherit;
+	}
+	
+	.nav-level-two li {
+			width: 100%!important;
+		}
+			
+}
+	  
+@media only screen and (min-width:$tablet-breakpoint) {/* tablet */
+
+	.m26-prog-main-masthead{
+	
+		.prog-masthead-overlay {
+			display: block;
+			position: absolute;
+			bottom: 60px;
+			background-color: rgba(15,15,15,0.5);
+			padding: 10px;
+			color: $text-white;
+		}
+		
+		.rte-header nav {
+			top: inherit;
+		}
+	
+		 .rte-header nav .nav-level-one {
+		   display: block;
+		   margin: 0;
+		  }
+		  
+		  .rte-header nav .nav-level-one li {
+			border-right: 1px solid $fill-white;
+		}
+		
+		.rte-header nav .nav-level-one li a {
+			border-bottom: none;
+		}
+		
+		.rte-header nav .nav-level-two {
+			left: 0;
+		}
+		
+		.rte-header nav .nav-level-two li {
+			border-right: none;
+			border-bottom: none;
+		}
+		
+		.rte-header nav .nav-level-two li a {
+			border-bottom: none;
+		}
+		  
+		  .rte-header nav .nav-level-two {
+			position: absolute;
+			/*top: 52px;*/
+			z-index: 1;
+		  }
+		  
+		.rte-header nav .nav-level-two li {
+			width: 16.666666%;
+		}
+			
+		.rte-header nav .nav-level-two li:nth-child(3n+1) {
+			clear: none;
+		}
+		
+		.find-show-nav .find-show-nav--sub {
+			height: auto;
+		}
+		
+		.rte-header nav .nav-level-one li .more-menu-trigger, .rte-header nav .nav-level-two li .more-menu-trigger, .rte-header nav .nav-level-one li .more-menu-trigger, .rte-header nav .nav-level-two li .find-show-nav--sub-expand {
+		  background: none; 
+		 }
+		 
+		.rte-header nav .nav-level-one li .more-selected, .rte-header nav .nav-level-two li .more-selected {
+		  background: none;
+		  }
+		  
+		.rte-header nav .nav-level-two li .nav-level-three li a:hover {
+			background: #695A4F;
+		}
+	}
+
+}
+
+
+@media only screen and (min-width:$desktop-breakpoint) {/* desktop */
+
+#programme-page-dd{
+	
+	.nav-level-two{
+		position: absolute;
+	}
+}
+	
+}
+@media only screen and (min-width:$mobile-breakpoint){/* phone */
+	.m26-prog-main-masthead{
+		background-color:#000000;
+		.prog-masthead-overlay p{
+				margin-bottom: 0px;
+				padding:4px;
+				/*background-color:#000000;*/
+				color:white;
+			}
+	}
+}

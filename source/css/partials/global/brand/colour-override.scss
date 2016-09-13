@@ -1,0 +1,220 @@
+/*
+===============================================================================
+  radio station page brand override - colors
+===============================================================================
+*/
+
+/* override default colours with specific radio station branding */
+
+
+/* RADIO 1 */
+
+.page.page-radio1 {
+
+	.m4-radio-masthead-find-station .fill-brown {
+		background-color: $fill-blue-radio1;
+	}
+	
+	.border-top--thick {
+		border-top: 4px solid $fill-blue-radio1;
+	}
+	
+	.open-schedule, .recommended-play-icon, .btn.prev, .btn.next {
+		background-color: $fill-blue-radio1;
+	}
+	
+	.fill-brown--light {
+		background-color: $fill-blue-radio1--light;
+	}
+	
+	.fixed-height-wrapper::-webkit-scrollbar-track {
+		background: rgba(87,169,211,0.3);
+	}
+	
+	.fixed-height-wrapper::-webkit-scrollbar-thumb {
+		background: $fill-blue-radio1;
+	}
+	
+	.load-more a {
+		color: $fill-blue-radio1;
+	}
+	
+}
+
+
+
+/* 2FM */
+
+.page.page-2fm {
+
+	.m4-radio-masthead-find-station .fill-brown,
+	.m16-radio-station-main-menu .nav-level-one,
+	.m16-radio-station-main-menu .nav-level-two,
+	.brand-radio1__homepage-tab-bar,
+	.m20-station-news-feed-carousel .fill-blue-radio1,
+	.rte-header.fill-blue-radio1 {
+		background-color: $fill-orange-2fm !important;
+	}
+	
+	.border-top--thick {
+		border-top: 4px solid $fill-orange-2fm;
+	}
+	
+	.rte-header nav .nav-level-one li .more-selected:hover, .rte-header nav .nav-level-one li .more-selected:active, .rte-header nav .nav-level-two li .nav-level-three li a:hover {
+		background-color: #EC663A !important;
+	  }
+	
+	.brand-radio1 .brand-radio1__content-wrapper {
+		border: 2px solid $fill-orange-2fm;
+	}
+	
+	.card_content {
+		background-color: $fill-orange-2fm--lighter !important;
+	}
+
+	
+	 .card:hover .card_content {
+	  background-color: $fill-orange-2fm--light !important;
+	  bottom: 0;
+	}
+	
+	.open-schedule, .recommended-play-icon, .btn.prev, .btn.next {
+		background-color: $fill-orange-2fm;
+	}
+	
+	.fill-brown--light {
+		background-color: $fill-orange-2fm--light;
+	}
+	
+	.fixed-height-wrapper::-webkit-scrollbar-track {
+		background: rgba(241,90,41,0.3);
+	}
+	
+	.fixed-height-wrapper::-webkit-scrollbar-thumb {
+		background: $fill-orange-2fm;
+	}
+	
+	.load-more a {
+		color: $fill-orange-2fm;
+	}
+	
+}
+
+
+
+/* LYRIC FM */
+
+.page.page-lyricfm {
+
+	.m4-radio-masthead-find-station .fill-brown, 
+	.m16-radio-station-main-menu .nav-level-one, 
+	.m16-radio-station-main-menu .nav-level-two,
+	.brand-radio1__homepage-tab-bar,
+	.m20-station-news-feed-carousel .fill-blue-radio1,
+	.rte-header.fill-blue-radio1 {
+		background-color: $fill-purple-lyricfm !important;
+	}
+	
+	.rte-header nav .nav-level-one li .more-selected:hover, .rte-header nav .nav-level-one li .more-selected:active, .rte-header nav .nav-level-two li .nav-level-three li a:hover {
+		background-color: #62359E !important;
+	  }
+	
+	.border-top--thick {
+		border-top: 4px solid $fill-purple-lyricfm;
+	}
+	
+	.brand-radio1 .brand-radio1__content-wrapper {
+		border: 2px solid $fill-purple-lyricfm;
+	}
+	
+	.card_content {
+		background-color: $fill-purple-lyricfm--lighter !important;
+	}
+	
+	.card:hover .card_content {
+	  background-color: $fill-purple-lyricfm--light !important;
+	  bottom: 0;
+	}
+	
+	.open-schedule, .recommended-play-icon {
+		background-color: $fill-purple-lyricfm !important;
+	}
+	
+	.btn.prev, .btn.next {
+		background-color: $fill-purple-lyricfm !important;
+	}
+	
+	.fill-brown--light {
+		background-color: $fill-purple-lyricfm--light;
+	}
+	
+	.fixed-height-wrapper::-webkit-scrollbar-track {
+		background: rgba(88,46,145,0.3);
+	}
+	
+	.fixed-height-wrapper::-webkit-scrollbar-thumb {
+		background: $fill-purple-lyricfm;
+	}
+	
+	.load-more a {
+		color: $fill-purple-lyricfm;
+	}
+	
+}
+
+
+/* RNAG */
+
+.page.page-rnag {
+
+	.m4-radio-masthead-find-station .fill-brown, 
+	.m16-radio-station-main-menu .nav-level-one, 
+	.m16-radio-station-main-menu .nav-level-two,
+	.brand-radio1__homepage-tab-bar,
+	.m20-station-news-feed-carousel .fill-blue-radio1,
+	.rte-header.fill-blue-radio1 {
+		background-color: $fill-green-rnag !important;
+	}
+	
+	.rte-header nav .nav-level-one li .more-selected:hover, .rte-header nav .nav-level-one li .more-selected:active, .rte-header nav .nav-level-two li .nav-level-three li a:hover {
+		background-color: #6AAB44 !important;
+	  }
+	
+	.border-top--thick {
+		border-top: 4px solid $fill-green-rnag;
+	}
+	
+	.brand-radio1 .brand-radio1__content-wrapper {
+		border: 2px solid $fill-green-rnag;
+	}
+	
+	.card_content {
+		background-color: $fill-green-rnag--lighter !important;
+	}
+	
+	.card:hover .card_content {
+	  background-color: $fill-green-rnag--light !important;
+	  bottom: 0;
+	}
+	
+	.open-schedule, .recommended-play-icon, .btn.prev, .btn.next {
+		background-color: $fill-green-rnag;
+	}
+	
+	.fill-brown--light {
+		background-color: $fill-green-rnag--light;
+	}
+	
+	.fixed-height-wrapper::-webkit-scrollbar-track {
+		background: rgba(90,145,58,0.3);
+	}
+	
+	.fixed-height-wrapper::-webkit-scrollbar-thumb {
+		background: $fill-green-rnag;
+	}
+	
+	.load-more a {
+		color: $fill-green-rnag;
+	}
+	
+}

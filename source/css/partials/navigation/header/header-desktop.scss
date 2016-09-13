@@ -1,0 +1,20 @@
+/*
+===============================================================================
+  navigation - header - desktop
+===============================================================================
+*/
+
+.header__nav__desktop { display: none; }
+
+
+@media only screen and (min-width:$tablet-breakpoint) {/* tablet */
+
+
+}
+
+
+@media only screen and (min-width:$desktop-breakpoint) {/* desktop */
+
+.header__nav__desktop { display: block; }
+
+}

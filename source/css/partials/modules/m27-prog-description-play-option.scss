@@ -1,0 +1,61 @@
+/*
+===============================================================================
+  module m27-prog-description-play-option
+===============================================================================
+*/
+
+.share-prog a{
+	width: 26px;
+	height: 26px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	margin-left: 10px;
+	background-size: 26px;
+}
+
+.share-prog--text {
+	position: relative;
+	top: -7px;
+	display: block;
+	margin-left: 10px;
+}
+
+.m27b-prog-description-play-option-with-image {
+	p {
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
+@media only screen and (min-width:$mobile-breakpoint) {
+
+	//.m27b-prog-description-play-option-with-image img{
+	//	width:100%;
+	//	}
+}
+
+@media only screen and (min-width:$tablet-breakpoint) {/* tablet */
+
+	.share-prog--text {
+		display: inline-block;
+		margin-left: 0;
+	}
+
+}
+
+
+@media only screen and (min-width:$desktop-breakpoint) {/* desktop */
+
+	.m27b-prog-description-play-option-with-image .play-social-icons-wrapper {
+		position: relative;
+		top: -35px;
+		margin-bottom: -35px;
+		margin-top:25px;
+	}
+
+	.icon-margin-left {
+		margin-left: 0.5rem;
+	}
+
+}

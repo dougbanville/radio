@@ -1,0 +1,45 @@
+/*
+===============================================================================
+  modules - module 3 example
+===============================================================================
+*/
+
+	.m21-individual-station-promo-carousel p {
+		position: relative;
+		top: -48px;
+	}
+	
+	.m21-individual-station-promo-carousel .owl-theme {
+		margin-bottom: -40px;
+	}
+	
+	.m21-individual-station-promo-carousel .owl-theme .owl-controls .owl-pagination {
+		display: none !important;
+	}
+	
+	.m21-individual-station-promo-carousel .owl-theme .owl-controls .owl-buttons .owl-next {
+		right: 0;
+		top: 40%;
+		border-radius: 5px;
+		padding: 10px;
+	}
+	
+	.m21-individual-station-promo-carousel .owl-theme .owl-controls .owl-buttons .owl-prev {
+		left: 0;
+		top: 40%;
+		border-radius: 5px;
+		padding: 10px;
+	}
+
+
+
+@media only screen and (min-width:$tablet-breakpoint) {/* tablet */
+
+	
+}
+
+@media only screen and (min-width:$desktop-breakpoint) {/* desktop */
+
+	
+
+}

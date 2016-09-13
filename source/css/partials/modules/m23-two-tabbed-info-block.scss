@@ -1,0 +1,33 @@
+/*
+===============================================================================
+  module 23 two tabbed info block
+===============================================================================
+*/
+
+.info-tab-content{
+	display: none;
+}
+
+.info-tab-content.current{
+	display: inherit;
+}
+
+.tab-toggle {
+	margin-top: 4px;
+}
+
+.tab-toggle.active-tab {
+	margin-top: 0;
+	padding-bottom: 12px !important;
+}
+
+@media only screen and (min-width:$tablet-breakpoint) {/* tablet */
+
+
+}
+
+
+@media only screen and (min-width:$desktop-breakpoint) {/* desktop */
+
+
+}

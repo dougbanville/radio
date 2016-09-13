@@ -1,0 +1,65 @@
+/*
+===============================================================================
+  global utilities - borders
+===============================================================================
+*/
+
+.border { border: $border; }
+.border-top { border-top: $border; }
+.border-right { border-right: $border; }
+.border-bottom { border-bottom: $border; }
+.border-left { border-left: $border ; }
+
+.border--lighter { border: $border--lighter; }
+.border-top--lighter { border-top: $border--lighter; }
+.border-right--lighter { border-right: $border--lighter; }
+.border-bottom--lighter { border-bottom: $border--lighter; }
+.border-left--lighter { border-left: $border--lighter ; }
+
+.border-top-white {border-top: 1px solid #fff;}
+.border-right-white {border-right: 1px solid #fff;}
+.border-bottom-white {border-bottom: 1px solid #fff;}
+
+.border-top--thick {border-top: 4px solid #7b6a5d;}
+
+.border-top--thick__radio1 {border-top: 4px solid #57a9d3;}
+.border-top--thick__2fm {border-top: 4px solid #f15a29;}
+.border-top--thick__lyricfm {border-top: 4px solid #582e91;}
+.border-top--thick__rnag {border-top: 4px solid #5a913a;}
+.border-top--thick__digital {border-top: 4px solid #da1a35;}
+
+.border-none { border: none; }
+.border-top-none { border-top: none; }
+.border-right-none { border-right: none; }
+.border-bottom-none { border-bottom: none; }
+.border-left-none { border-left: none ; }
+
+/* borders radio 1 */
+.border-radio1 {border: 2px solid $fill-blue;}
+
+/* borders 2fm */
+.border-2fm {border: 2px solid $fill-orange-2fm;}
+
+/* borders lyricfm */
+.border-lyricfm {border: 2px solid $fill-purple-lyricfm;}
+
+/* borders rnag */
+.border-rnag {border: 2px solid $fill-green-rnag;}
+
+/*-- rounded corners and circles --*/
+.rounded { border-radius: $border-radius; }
+.rounded-top { border-radius: $border-radius $border-radius 0 0; }
+.rounded-bottom { border-radius: 0 0 $border-radius $border-radius; }
+.circle { border-radius: 50%; }
+
+
+@media only screen and (min-width:$tablet-breakpoint) {/* tablet */
+
+
+}
+
+
+@media only screen and (min-width:$desktop-breakpoint) {/* desktop */
+
+
+}

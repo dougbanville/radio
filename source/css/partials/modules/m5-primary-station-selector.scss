@@ -1,0 +1,87 @@
+/*
+===============================================================================
+  modeuls - module 1 example
+===============================================================================
+*/
+.m5-primary-station-selector {
+	margin-top: -4px;
+}
+
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	display:none;
+	margin-left: 10px;
+}
+
+.item.tab-link.current .arrow-up {
+	display: inline-block;
+}
+
+/*.arrow-up.arrow-current {
+	display: inline-block;
+}*/
+
+.arrow-up.arrow-up--radio1 {
+	border-bottom: 20px solid $fill-blue-radio1;
+}
+
+.arrow-up.arrow-up--2fm {
+	border-bottom: 20px solid $fill-orange-2fm;
+}
+
+.arrow-up.arrow-up--lyricfm {
+	border-bottom: 20px solid $fill-purple-lyricfm;
+}
+
+.arrow-up.arrow-up--rnag {
+	border-bottom: 20px solid $fill-green-rnag;
+}
+
+
+
+/* radio 1 tab style and color */
+
+.brand-radio1 {
+	.brand-radio1__content-wrapper {
+		border: $border-radio1;
+	}
+}
+
+.m5-primary-station-selector {
+	.brand-radio1__homepage-tab-bar a {
+		background-size: 20px 13px;
+		background-repeat: no-repeat;
+		color: $text-white;
+		display: block;
+		margin-bottom: 10px;
+		
+		span {
+			margin-left: 10px;
+		}
+	}
+}
+
+@media only screen and (min-width:$tablet-breakpoint) {/* tablet */
+
+.m5-primary-station-selector {
+	.brand-radio1__homepage-tab-bar a {
+		display: inline-block;
+		margin-bottom: 0;
+	}
+}
+
+.arrow-up {
+		margin-left: 30px;
+	}
+
+}
+
+
+@media only screen and (min-width:$desktop-breakpoint) {/* desktop */
+
+	
+
+}

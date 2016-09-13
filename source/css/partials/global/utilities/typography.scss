@@ -1,0 +1,41 @@
+/*
+===============================================================================
+  global utilities - typography
+===============================================================================
+*/
+
+/*-- headings --*/
+h1, .text-1 { @include font-size(30px); font-weight:$regular; @include line-height (34px); margin-top: 0; margin-bottom: 40px; }
+h2, .text-2 { @include font-size(25px); font-weight:$regular; @include line-height (29px); margin-top: 0; margin-bottom: 20px; }
+h3, .text-3 { @include font-size(20px); font-weight:$regular; @include line-height (24px); margin-top: 0; margin-bottom: 20px; }
+h4, .text-4 { @include font-size(18px); font-weight:$regular; @include line-height (22px); margin-top: 0; margin-bottom: 5px; }
+h5, .text-5 { @include font-size(16px); font-weight:$regular; @include line-height (20px); margin-top: 0; margin-bottom: 20px; }
+h6, .text-6 { @include font-size(14px); font-weight:$regular; @include line-height (18px); margin-top: 0; margin-bottom: 20px; }
+
+/*-- paragraphs --*/
+p {	@include font-size(14px); font-weight:$regular; @include line-height (16px); margin-top: 0; margin-bottom: 20px; }
+p:last-child { margin-bottom: 0px; }
+
+/*-- emphasis and styling --*/
+.regular, .normal { font-weight: $regular; }
+.bold   { font-weight: $bold ; }
+.italic { font-style: italic; }
+.caps   { text-transform: uppercase; }
+
+/*-- alignment --*/
+.text-left    { text-align: left  ; }
+.text-center  { text-align: center; }
+.text-right   { text-align: right ; }
+.text-justify { text-align: justify; }
+
+/*-- overflow --*/
+.nowrap { white-space: nowrap;  }
+.truncate { white-space: nowrap; overflow: hidden ; text-overflow: ellipsis; }
+
+/*-- text decoration --*/
+.decoration-none { text-decoration: none; }
+.decoration-underline { text-decoration: underline; }
+.decoration-line-through { text-decoration: line-through; }
+
+/*-- list styles --*/
+.list-unstyled { margin-left:  0; padding-left: 0; list-style:none; }

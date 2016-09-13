@@ -1,0 +1,52 @@
+/*
+===============================================================================
+  helpers - class and placeholder helpers
+===============================================================================
+*/
+
+/*-- no padding --*/
+.no-pad { padding:0px; }
+.no-pad-bottom { padding-bottom: 0px; }
+.no-pad-top { padding-top: 0px; }
+.no-pad-right { padding-right: 0px; }
+.no-pad-left { padding-left: 0px; }
+.no-pad-tb { padding-top: 0px; padding-bottom: 0px; }
+.no-pad-rl { padding-right: 0px; padding-left: 0px; }
+
+/*-- no margin --*/
+.no-margin { margin:0px; }
+.no-margin-bottom { margin-bottom: 0px; }
+.no-margin-top { margin-top: 0px; }
+.no-margin-right { margin-right: 0px; }
+.no-margin-left { margin-left: 0px; }
+.no-margin-tb { margin-top: 0px; margin-bottom: 0px; }
+.no-margin-rl { margin-right: 0px; margin-left: 0px; }
+
+/*-- clearfix --*/
+.clearfix:before,
+%clearfix:before,
+.clearfix:after,
+%clearfix:after {
+  content: " "   !important;
+  display: table !important;
+}
+
+.clearfix:after { clear: both !important; }
+
+/*-- hide for responsive --*/
+.hide-mobile { display:none; } 
+.hide-desktop { display:inherit; }
+
+@media only screen and (min-width:$tablet-breakpoint) {/* tablet */
+
+/*-- hide for responsive --*/
+.hide-mobile { display:inherit; } 
+
+}
+
+@media only screen and (min-width:$desktop-breakpoint) {/* desktop */
+
+/*-- hide for responsive --*/
+.hide-desktop { display:none; }
+
+}

@@ -1,0 +1,41 @@
+/*
+===============================================================================
+  componenets - pagination
+===============================================================================
+*/
+
+.pagination {
+	text-align: center;
+}
+
+.pagination ul {
+	list-style: none;
+}
+
+.pagination ul li {
+	display: inline-block;
+}
+
+.pagination ul li a {
+	color: $text-black;
+	font-weight: bold;
+	padding-right: 5px;
+}
+
+.pagination ul li a.pagination-item.pagination-item--more {
+	padding-right: 0;
+	padding-left: 5px;
+	color: $fill-orange-2fm;
+}
+
+
+@media only screen and (min-width:$tablet-breakpoint) {/* tablet */
+
+
+}
+
+
+@media only screen and (min-width:$desktop-breakpoint) {/* desktop */
+
+
+}

@@ -1,0 +1,54 @@
+/*
+===============================================================================
+  modeuls - module 1 example
+===============================================================================
+*/
+
+.m10-three-panel-image-carousel {
+	p {
+		position: relative;
+		top: -48px;
+	}
+	
+	.owl-wrapper {
+		margin-bottom: -48px;
+	}
+	
+	.owl-theme .owl-controls {
+		display: none !important;
+	}
+	
+	.customNavigation {
+		position: relative;
+		top: -30px;
+		
+		.btn.prev {
+			position: absolute;
+			right: 60px;
+			width: 8px;
+			height: 13px;
+			background-size: cover;
+			background-color: $fill-brown;
+		}
+		
+		.btn.next {
+			position: absolute;
+			right: 20px;
+			width: 8px;
+			height: 13px;
+			background-size: cover;
+			background-color: $fill-brown;
+		}
+	}
+}
+
+@media only screen and (min-width:$tablet-breakpoint) {/* tablet */
+
+
+}
+
+
+@media only screen and (min-width:$desktop-breakpoint) {/* desktop */
+
+
+}

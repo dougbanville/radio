@@ -1,0 +1,524 @@
+/*
+===============================================================================
+  modeuls - module 4 m4-radio-masthead-find-station
+===============================================================================
+*/
+.search-input-wrapper {
+
+}
+
+.search-field-button-wrapper {
+	width: 100%;
+    position: relative;
+	
+	.search-input-field {
+		border:none;
+		width: 100%;
+	}
+	
+	.search-input-button {
+		width: 23px;
+		height: 23px;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		display: inline-block;
+		position: absolute;
+		top: -2px;
+		right: 8px;
+	}
+}
+
+img.rte-radio-player-img {
+	display: none;
+}
+
+
+.m4-radio-masthead-find-station {
+
+	
+	.station-logo {
+		margin-top: 30px!important;
+		margin-left: 0!important;
+		margin-bottom: 15px !important;
+	}
+	
+	.more-menu-trigger--select-station {
+		width: 100%;
+		text-align: right;
+	}
+	
+	.menu-trigger--individual-station {
+		width: 23px;
+		height: 20px;
+		position: absolute;
+		right: 30px;
+		bottom: 20%;
+		background-repeat: no-repeat;
+	}
+	
+	.icon-Stations {
+		background-repeat: no-repeat;
+		background-position: 10px;
+	}
+	
+	.rte-header {
+	  clear: both;
+	  font-family: 'Open Sans', Arial, "Helvetica Neue", Helvetica, sans-serif;
+	  min-height: 0;
+	 }
+	 
+	 .rte-header nav {
+		min-height: 0;
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+	 }
+	 
+	.rte-header nav a, .rte-header nav a:visited {
+	  color: #eeeeee;
+	  text-decoration: none;
+	  outline: none;
+	  outline: 0; 
+	 }
+	 
+	 .rte-header nav .nav-level-one, .rte-header nav .nav-level-two {
+	   margin: 0;
+	   padding: 0;
+	   margin-top: 50px;
+	   height: 0;
+	   overflow: hidden; 
+	  }
+	  
+	  .rte-header nav .nav-level-one li, .rte-header nav .nav-level-two li {
+		font-size: 0.875em;
+		list-style: none;
+		padding: 0 0.9em; 
+	  }
+		
+	 .rte-header nav .nav-level-one li a, .rte-header nav .nav-level-two li a {
+		  border-bottom: solid 1px $text-white;
+		  display: block;
+		  padding: 0.9em 0; 
+	  }
+		
+		.rte-header nav .nav-level-one li .more-menu-trigger, .rte-header nav .nav-level-two li .more-menu-trigger, .rte-header nav .nav-level-one li .more-menu-trigger, .rte-header nav .nav-level-two li .find-prog-nav--sub-expand {
+		  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAALBAMAAABSacpvAAAABGdBTUEAALGPC/xhBQAAACRQTFRF7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7uAAAA7u7u52bPZwAAAAt0Uk5TcDCvEN+AQCDvzwAVScY9AAAASUlEQVQI12NYBQELGFbuBoGdCxgWdoMYjQsYVnGDGFxAxiIgvQmoZtVi7927m0GMVdm7d2eBGUt3b10FZqyaPQvKKKmCMsAmAwD3Yzhb4D2xywAAAABJRU5ErkJggg==) no-repeat;
+		  background-position: 100%; 
+		 }
+		 
+		.rte-header nav .nav-level-one li .more-selected, .rte-header nav .nav-level-two li .more-selected {
+		  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAALCAYAAACgR9dcAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjgxMTBFMEQ3QTgzRDExRTJBRDFFQkQwN0M2NEM3NzI0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjgxMTBFMEQ4QTgzRDExRTJBRDFFQkQwN0M2NEM3NzI0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6ODExMEUwRDVBODNEMTFFMkFEMUVCRDA3QzY0Qzc3MjQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6ODExMEUwRDZBODNEMTFFMkFEMUVCRDA3QzY0Qzc3MjQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5LRJc8AAAAZUlEQVR42mL8//8/A7mACY+cAhDfh9LYAchmHPj8fwg4j0sNLo0N/1FBA7GaHf5jBw6ENAsA8X0cmt9D5XFqXv8fP1iPS3PBf+JAAbpmA6iziAHvoeoZ0KOFWACOPkZKUhhAgAEACbyquYHbY7MAAAAASUVORK5CYII=) no-repeat;
+		  background-position: 100%;
+		  color: #FFF;
+		  }
+		  
+	.rte-header nav .nav-level-two {
+	  margin-top: 0;
+	  background: $fill-brown; 
+	  }
+	  
+	  .rte-header nav .nav-level-two li a {
+		color: $text-white; 
+		}
+		
+	  .rte-header nav .nav-level-two li a:hover {
+		color: #eeeeee; 
+		}
+		
+	.rte-header nav .menu-visible {
+	  height: auto;
+	  overflow: auto;
+	  margin-top: 50px; 
+	  }
+	  
+	.rte-header nav .more-menu-visible {
+	  height: auto;
+	  overflow: auto;
+	  padding-bottom: 1em; 
+	  }
+	  
+	  /* style carousel controls */
+	  .owl-theme .owl-controls .owl-pagination {
+		display: none !important;
+		}
+		
+		#owl-demo .item .radio-circle-item {
+			margin: 10px auto;
+		}
+		
+		
+		.icon-Radio1_stacked, .icon-LyricFM_stacked, .icon-RnG_stacked {
+			background-size: 90%;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		
+		.icon-2FM_stacked {
+			background-size: 60% !important;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		
+		.js-show-hide {
+			display: none;
+		}
+		
+		.icon-RTE_Pulse_Avatar, .icon-RTE_2XM_Avatar, .icon-RTEjnr_Radio_Avatar, .icon-RTE_Gold_Avatar, .icon-RTE_Radio_1_Extra_Avatar,{
+			background-repeat: no-repeat;
+			background-position: center;
+			width: 50px !important;
+			height: 50px !important;
+			background-size: 80%;
+			margin: 20px 10px 10px 10px !important;
+		}
+		
+		.icon-RTE_Pulse_Avatar {
+			background-color: #da1a35 !important;
+		}
+
+		.icon-RTE_2XM_Avatar {
+			background-color: #0f0f0f !important;
+		} 
+		
+		.icon-RTEjnr_Radio_Avatar {
+			background-color: #b5d334 !important;
+		} 
+		
+		.icon-RTE_Gold_Avatar {
+			background-color: #9f7012 !important;
+		} 
+		
+		.icon-RTE_Radio_1_Extra_Avatar {
+			background-color: #0e2d62 !important;
+		}
+  }
+  
+  
+  /* toggle sub nav for find a prog */
+  
+  .find-prog-nav ul {
+        -webkit-transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+        -moz-transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+        transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+        list-style: none;
+        margin-top: 0;
+        margin-bottom: 0;
+        overflow: hidden;
+        padding: 0 20px;
+        height: 0; 
+	}
+		
+		
+        .find-prog-nav ul li {
+          float: left;
+          font-size: .813em;
+          width: 45%; 
+		 
+		 }
+		 
+          .find-prog-nav ul li a {
+            border-bottom: solid 1px #444444;
+            color: #bbbbbb;
+            display: block;
+            padding: 1em 0;
+            margin-right: 1em;
+            text-decoration: none; 
+			}
+			
+        .find-prog-nav ul li:nth-child(2n+1) {
+          clear: left;
+          width: 55%; 
+		  }
+		  
+      .find-prog-nav .section-visible {
+        -webkit-transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+        -moz-transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+        transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+        height: auto;
+        min-height: 40px;
+        max-height: 4000px; 
+		}
+		
+  .find-prog-nav .footer-additional {
+    background-color: #1a1a1a;
+    min-height: 50px; 
+	}
+	
+    .find-prog-nav .footer-additional .additional-section {
+      margin: auto;
+      max-width: 1440px;
+      overflow: auto;
+      padding: 1em;
+      position: relative;
+      min-height: 50px; 
+	  }
+	  
+     .find-prog-nav .footer-additional .additional-section p {
+        font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+        color: #6e6e6e;
+        font-size: .813em; 
+		}
+		
+
+	.rte-header nav .nav-level-two li .nav-level-three li {
+		width: 100%;
+		padding: 0;
+	}
+	
+	.rte-header nav .nav-level-two li .nav-level-three li a {
+		border-bottom: none;
+		margin: 0;
+	}
+	
+	#owl-demo .item {
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  color: #FFF;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+}
+	
+	#owl-demo .item .radio-circle-item{
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  color: #FFF;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.owl-carousel .owl-item {
+  text-align: center;
+}
+
+.owl-carousel .owl-item a{
+	display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Styling Next and Prev buttons */
+
+.owl-theme .owl-controls .owl-buttons div{
+	color: #FFF;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+	margin: 5px;
+	padding: 3px 10px;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	background: #869791;
+	filter: Alpha(Opacity=50);/*IE7 fix*/
+	opacity: 0.5;
+}
+/* Clickable class fix problem with hover on touch devices */
+/* Use it for non-touch hover action */
+.owl-theme .owl-controls.clickable .owl-buttons div:hover{
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+	text-decoration: none;
+}
+
+.owl-theme .owl-controls .owl-buttons div {
+  position: absolute;
+}
+ 
+.owl-theme .owl-controls .owl-buttons .owl-prev{
+  left: 0;
+  top: 30px; 
+}
+ 
+.owl-theme .owl-controls .owl-buttons .owl-next{
+  right: 0px;
+  top: 30px;
+}
+
+
+.tabs{
+	margin: 0px;
+	padding: 0px;
+}
+.tabs .item{
+	color: #222;
+	display: inline-block;
+	padding: 10px 15px;
+	cursor: pointer;
+}
+
+.tabs .item.current{
+	color: #222;
+}
+
+.tab-content{
+	display: none;
+	background: #ededed;
+	padding: 15px;
+}
+
+.tab-content.current{
+	display: inherit;
+}
+
+@media only screen and (min-width:$mobile-breakpoint) {
+	.m4-radio-masthead-find-station {
+		.station-logo {
+					width: 75%;
+			}
+	}
+}
+
+@media only screen and (min-width:$tablet-breakpoint) {/* tablet */
+
+	.search-field-button-wrapper {
+		width: 100%;
+		position: relative;
+		float: right;
+		
+		.search-input-field {
+			border:none;
+			width: 246px;
+			float: right;
+		}
+		
+		.search-input-button {
+			width: 23px;
+			height: 23px;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			display: inline-block;
+			position: absolute;
+			top: 6px;
+			right: 8px;
+		}
+	}
+
+	.search-input-wrapper {
+		width: 55%;
+	}
+	
+	.station-logo {
+			margin-top: -80px !important;
+			margin-left: 0 !important;
+			margin-bottom: 0 !important;
+		}
+
+	img.rte-radio-player-img {
+		display: block;
+	}
+
+	.display-flex {
+		display: flex;
+	}
+	
+	.m4-radio-masthead-find-station {
+	
+		.station-logo {
+			width: 40%;
+			margin-top: -80px !important;
+			margin-left: 0 !important;
+			margin-bottom: 0 !important;
+		}
+		
+		.more-menu-trigger--select-station {
+			width: 246px;
+		}
+		
+	
+		.menu-trigger--individual-station {
+			display: none;
+		}
+		
+	
+		.icon-Radio1_stacked, .icon-2FM_stacked, .icon-LyricFM_stacked, .icon-RnG_stacked{
+			background-size: 80%;
+		}
+		
+		.icon-RTE_Pulse_Avatar, .icon-RTE_2XM_Avatar, .icon-RTEjnr_Radio_Avatar, .icon-RTE_Gold_Avatar, .icon-RTE_Radio_1_Extra_Avatar,{
+			width: 90px !important;
+			height: 90px !important;
+		}
+	}
+	
+	#owl-demo .item {
+	  width: 100px;
+	  height: 100px;
+	}
+	
+	#owl-demo .item .radio-circle-item{
+	  width: 100px;
+	  height: 100px;
+	}
+}
+
+
+@media only screen and (min-width:$desktop-breakpoint) {/* desktop */
+
+	.search-input-wrapper {
+		width: auto;
+	}
+	
+	.station-logo {
+		width: auto !important;
+	}
+	
+	.search-input-field {
+		width: 218px;
+	}
+
+	.m4-radio-masthead-find-station {
+	
+		.station-logo {
+			margin-top: -85px !important;
+		}
+		
+		.rte-header nav .nav-level-two li {
+			width: 16.666666%;
+			}
+			
+		.rte-header nav .nav-level-two li:nth-child(3n+1) {
+			clear: none;
+		}
+		
+		.find-prog-nav .find-prog-nav--sub {
+			height: auto;
+		}
+		
+		.rte-header nav .nav-level-one li .more-menu-trigger, .rte-header nav .nav-level-two li .more-menu-trigger, .rte-header nav .nav-level-one li .more-menu-trigger, .rte-header nav .nav-level-two li .find-prog-nav--sub-expand {
+		  background: none; 
+		 }
+		 
+		.rte-header nav .nav-level-one li .more-selected, .rte-header nav .nav-level-two li .more-selected {
+		  background: none;
+		  }
+		  
+		.rte-header nav .nav-level-two li .nav-level-three li a:hover {
+			background: #695A4F;
+		}
+		
+		.icon-RTE_Pulse_Avatar, .icon-RTE_2XM_Avatar, .icon-RTEjnr_Radio_Avatar, .icon-RTE_Gold_Avatar, .icon-RTE_Radio_1_Extra_Avatar {
+			width: 100px !important;
+			height: 100px !important;
+			background-size: 70%;
+		}
+	}
+	
+	#owl-demo .item{
+	  width: 120px;
+	  height: 120px;
+	}
+	
+	#owl-demo .item .radio-circle-item{
+	  width: 120px;
+	  height: 120px;
+	  display: block;
+	  border-radius: 50%
+	}
+}

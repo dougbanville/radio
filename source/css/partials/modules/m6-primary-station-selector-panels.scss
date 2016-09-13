@@ -1,0 +1,90 @@
+/*
+===============================================================================
+  modeuls - module 1 example
+===============================================================================
+*/
+
+.card {
+  min-height: 100px;
+  overflow: hidden;
+  position: relative;
+  top: -100px;
+  margin-bottom: -85px;
+}
+
+.card_content {
+  background-color: $fill-blue-radio1--lighter;
+  color: #fff;
+  padding: 10px;
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  left: 0;
+  
+  transition: all 0.5s ease;
+}
+
+.tab-2fm-wrapper .card_content {
+	background-color: $fill-orange-2fm--lighter !important;
+}
+
+.tab-lyricfm-wrapper .card_content {
+	background-color: $fill-purple-lyricfm--lighter !important;
+}
+
+.tab-rnag-wrapper .card_content {
+	background-color: $fill-green-rnag--lighter !important;
+}
+
+.card:hover .card_content {
+  background-color: $fill-blue-radio1--light;
+  bottom: 0;
+}
+
+.tab-2fm-wrapper .card:hover .card_content {
+  background-color: $fill-orange-2fm--light !important;
+  bottom: 0;
+}
+
+.tab-lyricfm-wrapper .card:hover .card_content {
+  background-color: $fill-purple-lyricfm--light !important;
+  bottom: 0;
+}
+
+.tab-rnag-wrapper .card:hover .card_content {
+  background-color: $fill-green-rnag--light !important;
+  bottom: 0;
+}
+
+.card_content .visit-website a {
+  color: $text-white;
+}
+
+.card_content .visit-website a span {
+	background-repeat: no-repeat;
+    background-position: 100%;
+    padding-right: 25px;
+}
+
+.visit-website.live-play-now {
+	display: inline-block;
+    float: right;
+    margin-top: -40px;
+}
+
+.card_content h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+
+@media only screen and (min-width:$tablet-breakpoint) {/* tablet */
+
+
+}
+
+
+@media only screen and (min-width:$desktop-breakpoint) {/* desktop */
+
+
+}

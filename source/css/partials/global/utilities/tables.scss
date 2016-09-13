@@ -1,0 +1,39 @@
+/*
+===============================================================================
+  global utilities - table variations
+===============================================================================
+*/
+
+table { margin: 0; width:100%; }
+table, tr, th, td, { border: 0; }
+th, td { padding: 0.5rem; text-align: left; }
+table caption { padding: 1.0rem; }
+
+/*-- table border --*/
+.table__border {
+  border: $border;
+  th { border-bottom: $border; }
+  tr td { border-bottom: $border; }
+  tr:last-child td { border-bottom: 0; }
+}
+.table__border td, .table__border th { padding: $space-2; }
+
+/*-- table scroll --*/
+.table__scroll  { margin: 0; border-collapse: collapse; width:100%; min-width:$tablet-breakpoint; } 
+.table__scroll__container { width: 100%; overflow: auto; }
+
+/*-- table layout --*/
+.table { border-collapse: separate; border-spacing: 0; display: table; }
+.td, .th { display: table-cell; }
+.tr { display: table-row; }
+
+@media only screen and (min-width:$tablet-breakpoint) {/* tablet */
+
+
+}
+
+
+@media only screen and (min-width:$desktop-breakpoint) {/* desktop */
+
+
+}

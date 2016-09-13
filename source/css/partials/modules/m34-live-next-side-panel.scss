@@ -1,0 +1,27 @@
+/*
+===============================================================================
+ m34-live-next-side-panel
+===============================================================================
+*/
+
+.m34-live-next-side-panel .recommended-play-icon {
+	display: inline-block;
+	top: 7px;
+	background-size: 60%;
+}
+
+.m34-live-next-side-panel .recommended-play-icon.icon-Play_icon {
+	background-size: 40%;
+}
+
+
+@media only screen and (min-width:$tablet-breakpoint) {/* tablet */
+
+
+}
+
+
+@media only screen and (min-width:$desktop-breakpoint) {/* desktop */
+
+
+}

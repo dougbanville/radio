@@ -1,0 +1,44 @@
+<!-- start m13 station schedule -->
+<div class="m13-station-schedule mb2">
+	<div class="row">
+		<div class="small-12 columns">
+			<div class="panel-header-section px2 py1 border-bottom border-top--thick fill-white block overflow-hidden">
+				<h3 class="m0 float-left">Schedule</h3><a id="open-schedule" class="open-schedule icon-Open_icon float-right"></a>
+			</div>
+			<div id="schedule-reveal" class="hide-elem">
+				<div class="border-bottom block full-width height-auto overflow-hidden pt2 pb2 fill-white">	
+					<div class="small-12 columns">
+						<div class="topHolder">
+							<div id="SEARCH"></div>
+							<div id="PLATFORMHOLDER"></div>
+						</div>
+						<div id="FEATURED"></div>
+						<div id="GRID" style="height: 665px; min-height: 665px;"></div>
+						<script>
+							MBST = MBST || {};
+
+							typeof(window.console) != 'undefined' && console.log('MBST.load');
+							MBST.load({
+								client: 'rteradio',
+								widgets: [
+									{
+										name: 'epg',
+										version: '1',
+										modules: {
+											grid: {
+												platformAndRegionHolder: '#PLATFORMHOLDER'
+											}
+										}
+									}
+								]
+							});
+						</script>  
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> 
+</div>
+<!-- end m13 station schedule -->
+
+        

@@ -1,0 +1,47 @@
+/*
+===============================================================================
+  componenets - load more
+===============================================================================
+*/
+
+.load-more {
+	text-align: center;
+	  position: absolute;
+	  z-index:1000;
+	  width:92%;
+	  bottom:0;
+	  display:block;
+	  height:20px;
+	  background:#FFFEFE;
+}
+
+.load-more a {
+	text-align: center;
+	text-transform: uppercase;
+	color: $fill-brown;
+	
+}
+
+.load-more a:hover {
+	cursor: pointer;
+}
+
+
+@media only screen and (min-width:$tablet-breakpoint) {/* tablet */
+
+	.load-more {
+		display: none;
+	}
+	
+	.load-more-link{
+		display: none;
+	}
+
+}
+
+
+@media only screen and (min-width:$desktop-breakpoint) {/* desktop */
+
+	
+
+}

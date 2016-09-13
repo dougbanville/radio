@@ -1,0 +1,102 @@
+/*
+===============================================================================
+  helpers - scss variables
+===============================================================================
+*/
+
+/*-- grid --*/
+$grid-gutter: 15px;
+$grid-min-width: 320px;
+$grid-max-width: 1200px;
+$mobile-breakpoint: 320px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1024px;
+
+/*-- brand fonts --*/
+$brand-font: 'Arial', 'Sans-Serif';
+
+/*-- font weights --*/
+$regular: 400;
+$bold: 700;  
+
+/*-- borders --*/
+$border: 1px solid #c6c5c5;
+$border--lighter: 1px solid rgba(0, 0, 0, .1);
+$border-radius: 3px;
+
+/*-- brand text colors --*/
+$text-black: #000;
+$text-blue: #57a9d3;
+$text-grey: #333;
+$text-red: #E32;
+$text-white: #FFF;
+
+/*-- brand fill colors --*/
+$fill-black: #0f0f0f;
+$fill-blue: #57a9d3;
+$fill-blue-dark: #2c5176;
+$fill-green: #7ca940;
+$fill-grey: #ededea;
+$fill-light-grey: #fafafa;
+$fill-dark-grey: #999;
+$fill-red: #E32;
+$fill-white: #FFF;
+$fill-brown: #7b6a5d;
+$fill-purple: #582e91;
+
+
+$fill-brown--light: rgba(123, 106, 93, .9);
+$fill-brown--lighter: rgba(123, 106, 93, .7);
+
+/*-- radio 1 brand fill colors --*/
+$fill-blue-radio1: #57a9d3 !important;
+
+/*-- 2fm brand fill colors --*/
+$fill-orange-2fm: #f15a29;
+
+/*-- lyric fm brand fill colors --*/
+$fill-purple-lyricfm: #582e91;
+
+/*-- rnag brand fill colors --*/
+$fill-green-rnag: #5a913a;
+
+/*-- digital brand fill colors --*/
+$fill-red-digital: #da1a35;
+
+/*-- radio 1 brand fill colors with opacity --*/
+$fill-blue-radio1--light: rgba(87, 169, 211, .9);
+$fill-blue-radio1--lighter: rgba(87, 169, 211, .7);
+
+/*-- 2fm brand fill colors with opacity --*/
+$fill-orange-2fm--light: rgba(241, 90, 41, .9);
+$fill-orange-2fm--lighter: rgba(241, 90, 41, .7);
+
+/*-- lyricfm brand fill colors with opacity --*/
+$fill-purple-lyricfm--light: rgba(88, 46, 145, .9);
+$fill-purple-lyricfm--lighter: rgba(88, 46, 145, .7);
+
+/*-- rnag brand fill colors with opacity --*/
+$fill-green-rnag--light: rgba(90, 145, 58, .9);
+$fill-green-rnag--lighter: rgba(90, 145, 58, .7);
+
+/*-- borders --*/
+$border: 1px solid rgba(0, 0, 0, .2);
+$border--lighter: 1px solid rgba(0, 0, 0, .1);
+$border-radius: 3px;
+
+/*-- borders radio 1 --*/
+$border-radio1: 2px solid #57a9d3;
+
+/*-- spacing --*/
+$space-1: .5rem; //  8px
+$space-2: 1rem; // 16px
+$space-3: 1.5rem; // 24px
+$space-4: 2rem; // 32px
+$space-5: 3rem; // 48px
+$space-6: 4.5rem; // 72px
+
+/*-- z-index --*/
+$z1: 100;
+$z2: 200;
+$z3: 300;
+$z4: 400;

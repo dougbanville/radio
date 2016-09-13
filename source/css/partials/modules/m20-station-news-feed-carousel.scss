@@ -1,0 +1,52 @@
+/*
+===============================================================================
+  modeuls - module 1 example
+===============================================================================
+*/
+
+.m20-station-news-feed-carousel {
+	.owl-theme .owl-controls {
+		display: none !important;
+	}
+	
+	.customNavigation {
+		position: relative;
+		top: -28px;
+	}
+	
+	.customNavigation .btn.prev {
+		position: absolute;
+		right: 60px;
+		color: #fff !important;
+	}
+	
+	.customNavigation .btn.next {
+		position: absolute;
+		right: 20px;
+		color: #fff !important;
+	}
+
+}
+
+.customNavigation a:hover {
+	cursor: pointer;
+} 
+
+@media only screen and (min-width:$tablet-breakpoint) {/* tablet */
+
+
+}
+
+
+@media only screen and (min-width:$desktop-breakpoint) {/* desktop */
+
+	.m20-station-news-feed-carousel {
+		h5 {
+			text-align: center;
+		}
+		
+		.customNavigation {
+			display: none;
+		}
+	}
+}

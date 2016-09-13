@@ -1,0 +1,88 @@
+/*
+===============================================================================
+  global brand - colors
+===============================================================================
+*/
+
+/*-- fill colors --*/
+.fill-black { background-color:$fill-black; }
+.fill-blue { background-color:$fill-blue !important; }
+.fill-blue-dark { background-color:$fill-blue-dark }
+.fill-purple {background-color:$fill-purple !important;}
+.fill-green { background-color:$fill-green-rnag !important;}
+.fill-grey { background-color:$fill-grey; }
+.fill-red { background-color:$fill-red; }
+.fill-white { background-color:$fill-white; }
+.fill-brown { background-color:$fill-brown; }
+
+.fill-brown--light { background-color:$fill-brown--light; }
+.fill-brown--lighter { background-color:$fill-brown--lighter; }
+/*-- text colors --*/
+.text-black { color:$fill-black; }
+.text-blue { color:$fill-blue; }
+.text-grey { color:$fill-grey; }
+.text-grey-dark { color:$fill-dark-grey; }
+.text-red { color:$fill-red; }
+.text-white { color:$fill-white !important; }
+.text-brown { color:$fill-brown; }
+.text-orange { color:$fill-orange-2fm; }
+
+/*-- link colors --*/
+/*a, .link-blue { color: $text-blue;
+  &:hover { color: darken($text-blue, 20%); }
+}*/
+a {color: $fill-black;}
+
+.link-grey {
+  color: $text-grey;
+  &:hover { color: $text-blue; }
+}
+
+/*
+==================================================================================
+brand for radio 1
+==================================================================================
+*/
+
+.fill-blue-radio1 {background-color:$fill-blue !important;}
+
+/*
+==================================================================================
+brand for 2fm
+==================================================================================
+*/
+
+.fill-orange-2fm {background-color:$fill-orange-2fm;}
+.fill-orange-2fm--light {background-color:$fill-orange-2fm--light !important;}
+.fill-orange-2fm--lighter {background-color:$fill-orange-2fm--lighter !important;}
+
+/*
+==================================================================================
+brand for lyric fm
+==================================================================================
+*/
+
+.fill-purple-lyricfm {background-color:$fill-purple-lyricfm !important;}
+.fill-purple-lyricfm--light {background-color:$fill-purple-lyricfm--light !important;}
+.fill-purple-lyricfm--lighter {background-color:$fill-purple-lyricfm--lighter !important;}
+.text-purple-lyricfm {color:$fill-purple-lyricfm !important;}
+
+/*
+==================================================================================
+brand for rnag
+==================================================================================
+*/
+
+.fill-green-rnag {background-color:$fill-green-rnag !important;}
+.fill-green-rnag--light {background-color:$fill-green-rnag--light !important;}
+.fill-green-rnag--lighter {background-color:$fill-green-rnag--lighter !important;}
+.text-green-rnag {color:$fill-green-rnag !important;}
+
+/*
+==================================================================================
+brand for digital
+==================================================================================
+*/
+
+.fill-red-digital {background-color:$fill-red-digital;}
+
